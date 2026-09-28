@@ -320,7 +320,7 @@
       text-transform: uppercase;
     }
 
-    /* SECTION : CE QUI CHANGE POUR VOUS (4 COLONNES) */
+    /* SECTION : CE QUI CHANGE POUR VOUS */
     .value-props-section {
       max-width: 1100px;
       margin: 80px auto 40px;
@@ -522,6 +522,58 @@
       margin-top: 20px;
     }
 
+    /* BANNIÈRE D'URGENCE INTERMÉDIAIRE */
+    .urgent-banner-section {
+      max-width: 1100px;
+      margin: 60px auto;
+      padding: 40px 30px;
+      background: var(--card-bg);
+      border: 1px solid var(--border-color);
+      border-radius: 16px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+      text-align: center;
+    }
+
+    @media(min-width: 768px) {
+      .urgent-banner-section {
+        flex-direction: row;
+        text-align: left;
+      }
+    }
+
+    .urgent-banner-section h3 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.8rem;
+      font-weight: 400;
+      margin-bottom: 6px;
+    }
+
+    .urgent-banner-section p {
+      color: var(--text-muted);
+      font-size: 0.88rem;
+    }
+
+    .urgent-btn {
+      background: var(--bg-banner);
+      color: var(--text-banner);
+      padding: 14px 24px;
+      border-radius: 8px;
+      font-weight: 700;
+      font-size: 0.85rem;
+      text-decoration: none;
+      letter-spacing: 0.05em;
+      white-space: nowrap;
+      transition: background 0.2s ease;
+    }
+
+    .urgent-btn:hover {
+      background: #ffffff;
+    }
+
     /* SECTION : POUR ELLE / POUR LUI */
     .audience-section {
       max-width: 1100px;
@@ -718,27 +770,68 @@
       line-height: 1.5;
     }
 
-    /* BENEFITS SECTION */
+    /* BENEFITS SECTION (3 CARTES) */
     .benefits-section {
       max-width: 1100px;
-      margin: 20px auto 40px;
+      margin: 60px auto;
       padding: 0 20px;
+    }
+
+    .benefits-header {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+
+    .benefits-header span {
+      text-transform: uppercase;
+      letter-spacing: 0.2em;
+      font-size: 0.75rem;
+      color: var(--text-muted);
+      margin-bottom: 10px;
+      display: block;
+      font-weight: 600;
+    }
+
+    .benefits-header h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 2.8rem;
+      font-weight: 400;
+      line-height: 1.2;
+    }
+
+    .benefits-header h2 span {
+      font-style: italic;
+      color: var(--accent-pink);
+      display: block;
+    }
+
+    .benefits-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
       gap: 20px;
     }
 
     .benefit-card {
       background: var(--card-bg);
       border: 1px solid var(--border-color);
-      padding: 28px;
-      border-radius: 10px;
+      padding: 35px 30px;
+      border-radius: 12px;
+      position: relative;
+    }
+
+    .benefit-card .card-num {
+      font-family: 'Playfair Display', serif;
+      font-style: italic;
+      color: var(--accent-pink);
+      font-size: 1.2rem;
+      margin-bottom: 15px;
+      display: block;
     }
 
     .benefit-card h3 {
-      font-size: 1.05rem;
-      margin-bottom: 10px;
-      color: var(--accent-pink);
+      font-size: 1.2rem;
+      margin-bottom: 12px;
+      color: var(--text-main);
       font-weight: 600;
     }
 
@@ -746,6 +839,109 @@
       font-size: 0.88rem;
       color: var(--text-muted);
       line-height: 1.5;
+    }
+
+    /* TECHNOLOGY SECTION (6 CARTES) */
+    .tech-section {
+      max-width: 1100px;
+      margin: 80px auto;
+      padding: 0 20px;
+    }
+
+    .tech-header {
+      text-align: center;
+      margin-bottom: 50px;
+    }
+
+    .tech-header span {
+      text-transform: uppercase;
+      letter-spacing: 0.2em;
+      font-size: 0.75rem;
+      color: var(--text-muted);
+      margin-bottom: 10px;
+      display: block;
+      font-weight: 600;
+    }
+
+    .tech-header h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 2.8rem;
+      font-weight: 400;
+      line-height: 1.2;
+    }
+
+    .tech-header h2 span {
+      font-style: italic;
+      color: var(--accent-pink);
+      display: block;
+    }
+
+    .tech-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 20px;
+    }
+
+    .tech-card {
+      background: var(--card-bg);
+      border: 1px solid var(--border-color);
+      padding: 30px;
+      border-radius: 12px;
+    }
+
+    .tech-card h3 {
+      font-size: 1.1rem;
+      margin-bottom: 10px;
+      color: var(--text-main);
+      font-weight: 600;
+    }
+
+    .tech-card p {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      line-height: 1.5;
+    }
+
+    /* BLOC RARETÉ FINAL */
+    .rarity-block {
+      max-width: 1100px;
+      margin: 60px auto;
+      padding: 50px 30px;
+      background: var(--card-bg);
+      border: 1px solid var(--border-color);
+      border-radius: 16px;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .rarity-block h3 {
+      font-family: 'Playfair Display', serif;
+      font-size: 2.2rem;
+      font-weight: 400;
+    }
+
+    .rarity-block p {
+      color: var(--text-muted);
+      font-size: 0.9rem;
+    }
+
+    .rarity-btn {
+      background: var(--bg-banner);
+      color: var(--text-banner);
+      padding: 14px 28px;
+      border-radius: 8px;
+      font-weight: 700;
+      font-size: 0.85rem;
+      text-decoration: none;
+      letter-spacing: 0.05em;
+      transition: background 0.2s ease;
+    }
+
+    .rarity-btn:hover {
+      background: #ffffff;
     }
 
     /* GARANTIES */
@@ -1089,6 +1285,55 @@
       <div class="calc-footnote">Fourchette de prix indicative pour un traitement complet en clinique au Canada. Les résultats varient d'une personne à l'autre.</div>
     </section>
 
+    <!-- BANNIÈRE D'URGENCE INTERMÉDIAIRE -->
+    <section class="urgent-banner-section">
+      <div>
+        <h3>Économisez 59,80 $ au lancement.</h3>
+        <p>Ouverture des ventes dans <span id="banner-timer">36 j 13 h 07 min 30 s</span> • Code réservé aux inscrits</p>
+      </div>
+      <a href="#" class="urgent-btn">OBTENIR MON CODE -20% →</a>
+    </section>
+
+    <!-- SECTION MODE D'EMPLOI -->
+    <section class="how-it-works-section">
+      <div class="product-image-container">
+        <img src="rivelo-product.png" alt="Appareil Rivelo IPL" class="product-showcase-img">
+      </div>
+      
+      <div class="how-it-works-content">
+        <span class="category-subtitle">— PROTOCOLE SIMPLE</span>
+        <h2 style="font-family: 'Playfair Display', serif; font-size: 2rem; margin-bottom: 25px; font-weight: 400;">
+          Une peau lisse en 3 étapes.
+        </h2>
+
+        <div class="steps-list">
+          <div class="step-item">
+            <div class="step-number">1</div>
+            <div class="step-content">
+              <h4>Préparez la zone</h4>
+              <p>Rasez de près la zone à traiter pour que la lumière atteigne directement le follicule pileux sous la peau.</p>
+            </div>
+          </div>
+
+          <div class="step-item">
+            <div class="step-number">2</div>
+            <div class="step-content">
+              <h4>Flashez avec Rivelo</h4>
+              <p>Sélectionnez l'intensité adaptée à votre carnation et balayez la zone. L'appareil émet les flashs en continu.</p>
+            </div>
+          </div>
+
+          <div class="step-item">
+            <div class="step-number">3</div>
+            <div class="step-content">
+              <h4>Hydratez & Admirez</h4>
+              <p>Appliquez votre soin hydratant habituel. Répétez une fois par semaine pour constater la réduction de la pilosité.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <!-- SECTION : POUR ELLE / POUR LUI -->
     <section class="audience-section">
       <div class="audience-header">
@@ -1143,61 +1388,73 @@
       </div>
     </section>
 
-    <!-- SECTION MODE D'EMPLOI -->
-    <section class="how-it-works-section">
-      <div class="product-image-container">
-        <img src="rivelo-product.png" alt="Appareil Rivelo IPL" class="product-showcase-img">
+    <!-- BENEFITS SECTION (3 CARTES) -->
+    <section class="benefits-section">
+      <div class="benefits-header">
+        <span>POURQUOI RIVELO</span>
+        <h2>Pensé pour durer. <span>Disponible en quantité limitée.</span></h2>
       </div>
-      
-      <div class="how-it-works-content">
-        <span class="category-subtitle">— PROTOCOLE SIMPLE</span>
-        <h2 style="font-family: 'Playfair Display', serif; font-size: 2rem; margin-bottom: 25px; font-weight: 400;">
-          Une peau lisse en 3 étapes simples
-        </h2>
 
-        <div class="steps-list">
-          <div class="step-item">
-            <div class="step-number">1</div>
-            <div class="step-content">
-              <h4>Préparez la zone</h4>
-              <p>Rasez de près la zone à traiter pour que la lumière atteigne directement le follicule pileux sous la peau.</p>
-            </div>
-          </div>
-
-          <div class="step-item">
-            <div class="step-number">2</div>
-            <div class="step-content">
-              <h4>Flashez avec Rivelo</h4>
-              <p>Sélectionnez l'intensité adaptée à votre carnation et balayez la zone. L'appareil émet les flashs en continu.</p>
-            </div>
-          </div>
-
-          <div class="step-item">
-            <div class="step-number">3</div>
-            <div class="step-content">
-              <h4>Hydratez & Admirez</h4>
-              <p>Appliquez votre soin hydratant habituel. Répétez une fois par semaine pour constater la réduction de la pilosité.</p>
-            </div>
-          </div>
+      <div class="benefits-grid">
+        <div class="benefit-card">
+          <span class="card-num">01</span>
+          <h3>Technologie professionnelle</h3>
+          <p>Une technologie de lumière pulsée sécurisée, pensée pour une utilisation simple et rapide directement à domicile.</p>
+        </div>
+        <div class="benefit-card">
+          <span class="card-num">02</span>
+          <h3>Économie à long terme</h3>
+          <p>Rentabilisé dès les premières séances comparativement aux rendez-vous récurrents en institut spécialisé.</p>
+        </div>
+        <div class="benefit-card">
+          <span class="card-num">03</span>
+          <h3>Série limitée</h3>
+          <p>Seulement <b>500 unités</b> réservées pour la première vague d'expédition du 3 novembre.</p>
         </div>
       </div>
     </section>
 
-    <!-- BENEFITS SECTION -->
-    <section class="benefits-section">
-      <div class="benefit-card">
-        <h3>Technologie Professionnelle</h3>
-        <p>Une technologie de lumière pulsée sécurisée, pensée pour une utilisation simple et rapide directement à domicile.</p>
+    <!-- TECH SECTION (6 CARTES) -->
+    <section class="tech-section">
+      <div class="tech-header">
+        <span>PENSÉ POUR VOTRE EXPÉRIENCE</span>
+        <h2>De la technologie, <span>sans la complication.</span></h2>
       </div>
-      <div class="benefit-card">
-        <h3>Économie à long terme</h3>
-        <p>Rentabilisé dès les premières séances comparativement aux rendez-vous récurrents en institut spécialisé.</p>
-      </div>
-      <div class="benefit-card">
-        <h3>Série Limitée</h3>
-        <p>Seulement 500 unités réservées pour la première vague d'expédition du 3 novembre.</p>
+
+      <div class="tech-grid">
+        <div class="tech-card">
+          <h3>Refroidissement intégré</h3>
+          <p>Une fonction de refroidissement pensée pour accompagner la peau pendant votre routine.</p>
+        </div>
+        <div class="tech-card">
+          <h3>Détection du teint</h3>
+          <p>Le mode automatique détecte le teint et aide à adapter le niveau d'énergie approprié.</p>
+        </div>
+        <div class="tech-card">
+          <h3>Capteur de contact</h3>
+          <p>Le flash se déclenche lorsque la fenêtre de traitement est bien en contact avec la peau.</p>
+        </div>
+        <div class="tech-card">
+          <h3>3 niveaux d'intensité</h3>
+          <p>Adaptez l'utilisation selon la zone et votre tolérance.</p>
+        </div>
+        <div class="tech-card">
+          <h3>500 000 flashs</h3>
+          <p>Une capacité pensée pour accompagner votre routine sur la durée.</p>
+        </div>
+        <div class="tech-card">
+          <h3>Chez vous</h3>
+          <p>Votre appareil à portée de main, selon votre horaire. Sans rendez-vous.</p>
+        </div>
       </div>
     </section>
+
+    <!-- BLOC RARETÉ FINAL -->
+    <div class="rarity-block">
+      <h3>Seulement 500 appareils dans la première vague.</h3>
+      <p>Les inscrits reçoivent leur code en premier, le 3 novembre à 19 h.</p>
+      <a href="#" class="rarity-btn">RÉSERVER MA PLACE →</a>
+    </div>
 
     <!-- GARANTIES -->
     <section class="guarantees-section">
@@ -1283,7 +1540,7 @@
   <div class="sticky-footer-bar">
     <div class="sticky-left">
       <span>Lancement dans</span>
-      <span id="sticky-timer">36j 13h 11 min 21 s</span>
+      <span id="sticky-timer">36j 13h 06 min 43 s</span>
     </div>
     <div class="sticky-center">
       <span class="old-p">299 $</span>
@@ -1324,6 +1581,11 @@
         const stickyTimer = document.getElementById("sticky-timer");
         if(stickyTimer) {
           stickyTimer.innerText = `${daysStr}j ${hoursStr}h ${minsStr} min ${secsStr} s`;
+        }
+
+        const bannerTimer = document.getElementById("banner-timer");
+        if(bannerTimer) {
+          bannerTimer.innerText = `${days} j ${hours} h ${minutes} min ${seconds} s`;
         }
       }
     }
