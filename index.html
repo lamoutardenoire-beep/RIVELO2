@@ -36,7 +36,7 @@
       color: var(--text-main);
       line-height: 1.6;
       -webkit-font-smoothing: antialiased;
-      padding-bottom: 60px;
+      padding-bottom: 100px;
     }
 
     /* HEADER */
@@ -320,95 +320,336 @@
       text-transform: uppercase;
     }
 
-    /* SECTION COMPARATIVE */
-    .comparison-section {
+    /* SECTION : CE QUI CHANGE POUR VOUS (4 COLONNES) */
+    .value-props-section {
       max-width: 1100px;
-      margin: 50px auto 30px;
+      margin: 80px auto 40px;
       padding: 0 20px;
     }
 
-    .section-title {
+    .value-props-header {
       text-align: center;
-      font-family: 'Playfair Display', serif;
-      font-size: 2.2rem;
-      margin-bottom: 35px;
-      font-weight: 400;
+      margin-bottom: 50px;
     }
 
-    .comparison-grid {
+    .value-props-header span {
+      text-transform: uppercase;
+      letter-spacing: 0.2em;
+      font-size: 0.75rem;
+      color: var(--text-muted);
+      margin-bottom: 10px;
+      display: block;
+      font-weight: 600;
+    }
+
+    .value-props-header h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 2.8rem;
+      font-weight: 400;
+      line-height: 1.2;
+    }
+
+    .value-props-header h2 span {
+      font-style: italic;
+      color: var(--accent-pink);
+      display: block;
+    }
+
+    .value-props-grid {
       display: grid;
       grid-template-columns: 1fr;
-      gap: 20px;
+      gap: 16px;
     }
 
     @media (min-width: 768px) {
-      .comparison-grid {
+      .value-props-grid {
+        grid-template-columns: repeat(4, 1fr);
+      }
+    }
+
+    .value-prop-card {
+      background: var(--card-bg);
+      border: 1px solid var(--border-color);
+      border-radius: 12px;
+      padding: 30px 20px;
+      text-align: left;
+    }
+
+    .value-prop-card .big-num {
+      font-family: 'Playfair Display', serif;
+      font-size: 2.5rem;
+      font-weight: 600;
+      color: var(--text-main);
+      display: block;
+      margin-bottom: 4px;
+      line-height: 1;
+    }
+
+    .value-prop-card .prop-title {
+      font-size: 0.95rem;
+      font-weight: 600;
+      color: var(--accent-pink);
+      margin-bottom: 12px;
+      display: block;
+    }
+
+    .value-prop-card .prop-desc {
+      font-size: 0.82rem;
+      color: var(--text-muted);
+      line-height: 1.45;
+    }
+
+    /* SECTION : LE CALCUL (PRIX CLINIQUE VS RIVELO) */
+    .calculation-section {
+      max-width: 1100px;
+      margin: 80px auto;
+      padding: 0 20px;
+    }
+
+    .calculation-header {
+      text-align: center;
+      margin-bottom: 50px;
+    }
+
+    .calculation-header span {
+      text-transform: uppercase;
+      letter-spacing: 0.2em;
+      font-size: 0.75rem;
+      color: var(--text-muted);
+      margin-bottom: 10px;
+      display: block;
+      font-weight: 600;
+    }
+
+    .calculation-header h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 2.8rem;
+      font-weight: 400;
+      line-height: 1.2;
+    }
+
+    .calculation-header h2 span {
+      font-style: italic;
+      color: var(--accent-pink);
+      display: block;
+    }
+
+    .calculation-header p {
+      color: var(--text-muted);
+      font-size: 0.95rem;
+      max-width: 650px;
+      margin: 15px auto 0;
+      line-height: 1.5;
+    }
+
+    .calc-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 24px;
+    }
+
+    @media (min-width: 768px) {
+      .calc-grid {
         grid-template-columns: 1fr 1fr;
       }
     }
 
-    .comparison-card {
+    .calc-card {
       background: var(--card-bg);
       border: 1px solid var(--border-color);
-      padding: 32px;
-      border-radius: 12px;
+      border-radius: 16px;
+      padding: 40px 30px;
       position: relative;
     }
 
-    .comparison-card.highlight {
-      background: linear-gradient(180deg, rgba(242, 166, 166, 0.06) 0%, rgba(19, 23, 31, 1) 100%);
-      border: 1px solid rgba(242, 166, 166, 0.5);
-      box-shadow: 0 0 40px rgba(242, 166, 166, 0.1);
+    .calc-card.highlight {
+      background: linear-gradient(180deg, rgba(242, 166, 166, 0.05) 0%, rgba(19, 23, 31, 1) 100%);
+      border: 1px solid rgba(242, 166, 166, 0.4);
     }
 
-    .highlight-badge {
-      position: absolute;
-      top: -12px;
-      right: 20px;
-      background: var(--accent-pink);
-      color: #0b0d10;
-      font-size: 0.68rem;
-      font-weight: 700;
-      padding: 3px 10px;
-      border-radius: 50px;
+    .calc-card .card-type {
       text-transform: uppercase;
-      letter-spacing: 0.08em;
+      font-size: 0.68rem;
+      letter-spacing: 0.15em;
+      font-weight: 700;
+      color: var(--text-muted);
+      margin-bottom: 15px;
+      display: block;
     }
 
-    .comparison-card h3 {
-      font-family: 'Playfair Display', serif;
-      font-size: 1.3rem;
-      margin-bottom: 25px;
-      font-weight: 400;
-    }
-
-    .comparison-card.highlight h3 {
+    .calc-card.highlight .card-type {
       color: var(--accent-pink);
     }
 
-    .comparison-list {
+    .calc-card .price-display {
+      font-family: 'Playfair Display', serif;
+      font-size: 2.5rem;
+      font-weight: 600;
+      color: var(--text-main);
+      margin-bottom: 25px;
+      display: block;
+    }
+
+    .calc-card.highlight .price-display {
+      color: var(--accent-pink);
+    }
+
+    .calc-list {
       list-style: none;
       display: flex;
       flex-direction: column;
-      gap: 20px;
+      gap: 16px;
+      border-top: 1px solid var(--border-color);
+      padding-top: 25px;
     }
 
-    .comparison-item {
-      display: flex;
-      flex-direction: column;
-      gap: 4px;
-    }
-
-    .comparison-item .label {
+    .calc-list li {
       font-size: 0.9rem;
+      color: var(--text-muted);
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .calc-card.highlight .calc-list li {
       color: var(--text-main);
+    }
+
+    .calc-footnote {
+      text-align: center;
+      font-size: 0.72rem;
+      color: var(--text-muted);
+      margin-top: 20px;
+    }
+
+    /* SECTION : POUR ELLE / POUR LUI */
+    .audience-section {
+      max-width: 1100px;
+      margin: 80px auto;
+      padding: 0 20px;
+    }
+
+    .audience-header {
+      text-align: center;
+      margin-bottom: 50px;
+    }
+
+    .audience-header .subtitle-top {
+      text-transform: uppercase;
+      letter-spacing: 0.2em;
+      font-size: 0.75rem;
+      color: var(--text-muted);
+      margin-bottom: 10px;
+      display: block;
       font-weight: 600;
     }
 
-    .comparison-item .desc {
-      font-size: 0.85rem;
+    .audience-header h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 2.8rem;
+      font-weight: 400;
+      line-height: 1.2;
+      margin-bottom: 15px;
+    }
+
+    .audience-header h2 span {
+      font-style: italic;
+      color: var(--accent-pink);
+      display: block;
+    }
+
+    .audience-header p {
       color: var(--text-muted);
-      line-height: 1.45;
+      font-size: 0.95rem;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    .audience-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 30px;
+    }
+
+    @media (min-width: 768px) {
+      .audience-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
+    .audience-card {
+      background: var(--card-bg);
+      border: 1px solid var(--border-color);
+      border-radius: 16px;
+      padding: 40px 30px;
+      position: relative;
+    }
+
+    .audience-badge {
+      display: inline-block;
+      text-transform: uppercase;
+      font-size: 0.68rem;
+      letter-spacing: 0.15em;
+      font-weight: 700;
+      color: var(--accent-pink);
+      background: rgba(242, 166, 166, 0.1);
+      border: 1px solid rgba(242, 166, 166, 0.2);
+      padding: 4px 12px;
+      border-radius: 50px;
+      margin-bottom: 20px;
+    }
+
+    .audience-card h3 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.8rem;
+      font-weight: 400;
+      margin-bottom: 15px;
+      line-height: 1.3;
+    }
+
+    .audience-card > p {
+      color: var(--text-muted);
+      font-size: 0.9rem;
+      margin-bottom: 25px;
+      line-height: 1.5;
+    }
+
+    .tags-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-bottom: 30px;
+      padding-bottom: 25px;
+      border-bottom: 1px solid var(--border-color);
+    }
+
+    .tag {
+      background: rgba(255, 255, 255, 0.04);
+      border: 1px solid var(--border-color);
+      color: var(--text-main);
+      font-size: 0.78rem;
+      padding: 6px 12px;
+      border-radius: 6px;
+    }
+
+    .audience-benefits {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    .audience-benefits li {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      font-size: 0.9rem;
+      color: var(--text-main);
+    }
+
+    .audience-benefits li span {
+      color: var(--accent-pink);
+      font-weight: bold;
     }
 
     /* SECTION MODE D'EMPLOI */
@@ -621,6 +862,75 @@
       padding: 0 20px 20px 20px;
     }
 
+    /* STICKY BOTTOM BAR */
+    .sticky-footer-bar {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      background: #13171f;
+      border-top: 1px solid var(--border-color);
+      padding: 14px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      z-index: 1000;
+      box-shadow: 0 -10px 30px rgba(0,0,0,0.5);
+    }
+
+    .sticky-left {
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+    }
+
+    .sticky-left span:first-child {
+      font-size: 0.65rem;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--text-muted);
+    }
+
+    .sticky-left span:last-child {
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: var(--text-main);
+    }
+
+    .sticky-center {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .sticky-center .old-p {
+      text-decoration: line-through;
+      color: var(--text-muted);
+      font-size: 0.85rem;
+    }
+
+    .sticky-center .new-p {
+      font-weight: 700;
+      color: var(--accent-pink);
+      font-size: 1.2rem;
+    }
+
+    .sticky-btn {
+      background: var(--bg-banner);
+      color: var(--text-banner);
+      padding: 10px 20px;
+      border-radius: 6px;
+      font-weight: 700;
+      font-size: 0.8rem;
+      text-decoration: none;
+      letter-spacing: 0.05em;
+      transition: background 0.2s ease;
+    }
+
+    .sticky-btn:hover {
+      background: #ffffff;
+    }
+
     footer {
       text-align: center;
       padding: 30px 20px;
@@ -688,19 +998,19 @@
           <div class="countdown-title">Ouverture des ventes dans :</div>
           <div class="timer">
             <div class="time-unit">
-              <span class="number" id="days">40</span>
+              <span class="number" id="days">36</span>
               <span class="label">Jours</span>
             </div>
             <div class="time-unit">
-              <span class="number" id="hours">09</span>
+              <span class="number" id="hours">13</span>
               <span class="label">Heures</span>
             </div>
             <div class="time-unit">
-              <span class="number" id="mins">52</span>
+              <span class="number" id="mins">12</span>
               <span class="label">Min</span>
             </div>
             <div class="time-unit">
-              <span class="number" id="secs">20</span>
+              <span class="number" id="secs">55</span>
               <span class="label">Sec</span>
             </div>
           </div>
@@ -716,45 +1026,119 @@
       </div>
     </section>
 
-    <!-- SECTION COMPARATIVE -->
-    <section class="comparison-section">
-      <h2 class="section-title">Pourquoi repenser votre routine ?</h2>
-      <div class="comparison-grid">
-        <div class="comparison-card">
-          <h3>Méthodes Traditionnelles</h3>
-          <div class="comparison-list">
-            <div class="comparison-item">
-              <span class="label">Des centaines de dollars dépensés chaque année</span>
-              <span class="desc">Abonnements récurrents en institut ou achats continus de rasoirs jetables.</span>
-            </div>
-            <div class="comparison-item">
-              <span class="label">Rougeurs, coupures et poils incarnés</span>
-              <span class="desc">Une friction permanente et un inconfort cutané après chaque rasage ou épilation.</span>
-            </div>
-            <div class="comparison-item">
-              <span class="label">Une contrainte de temps hebdomadaire</span>
-              <span class="desc">Devoir recommencer tous les 2 ou 3 jours pour maintenir un résultat temporaire.</span>
-            </div>
-          </div>
+    <!-- SECTION : CE QUI CHANGE POUR VOUS -->
+    <section class="value-props-section">
+      <div class="value-props-header">
+        <span>CE QUI CHANGE POUR VOUS</span>
+        <h2>Moins de temps à y penser. <span>Plus de confiance.</span></h2>
+      </div>
+
+      <div class="value-props-grid">
+        <div class="value-prop-card">
+          <span class="big-num">1×</span>
+          <span class="prop-title">par semaine</span>
+          <p class="prop-desc">Au lieu d'un rasage tous les 2 ou 3 jours.</p>
+        </div>
+        <div class="value-prop-card">
+          <span class="big-num">0</span>
+          <span class="prop-title">rendez-vous</span>
+          <p class="prop-desc">Pas de déplacement, pas d'horaire à respecter, pas de salle d'attente.</p>
+        </div>
+        <div class="value-prop-card">
+          <span class="big-num">2–4</span>
+          <span class="prop-title">semaines</span>
+          <p class="prop-desc">Pour voir les premiers résultats avec une utilisation régulière.</p>
+        </div>
+        <div class="value-prop-card">
+          <span class="big-num">1</span>
+          <span class="prop-title">seul achat</span>
+          <p class="prop-desc">Un appareil à vous, qui remplace rasoirs, cire et forfaits.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION : LE CALCUL (PRIX CLINIQUE VS RIVELO) -->
+    <section class="calculation-section">
+      <div class="calculation-header">
+        <span>LE CALCUL</span>
+        <h2>Le même principe. <span>Une fraction du prix.</span></h2>
+        <p>L'épilation définitive en clinique se paie en milliers de dollars, séance après séance. RIVELO se paie une seule fois.</p>
+      </div>
+
+      <div class="calc-grid">
+        <div class="calc-card">
+          <span class="card-type">TRAITEMENT LASER EN CLINIQUE</span>
+          <span class="price-display">2 500 – 9 000 $</span>
+          <ul class="calc-list">
+            <li>Plusieurs séances à planifier</li>
+            <li>Déplacements et rendez-vous</li>
+            <li>À payer à chaque forfait</li>
+          </ul>
         </div>
 
-        <div class="comparison-card highlight">
-          <div class="highlight-badge">La Solution Idéale</div>
-          <h3>L'Approche Rivelo</h3>
-          <div class="comparison-list">
-            <div class="comparison-item">
-              <span class="label">Un investissement unique et rentabilisé</span>
-              <span class="desc">Un seul appareil amorti dès les premières semaines d'utilisation à la maison.</span>
-            </div>
-            <div class="comparison-item">
-              <span class="label">Douceur ciblée & technologie indolore</span>
-              <span class="desc">Conçu pour respecter la sensibilité de votre peau tout en ciblant le poil à la racine.</span>
-            </div>
-            <div class="comparison-item">
-              <span class="label">Résultats visibles dès 2 à 4 semaines</span>
-              <span class="desc">Une réduction progressive et durable de la pilosité, à votre propre rythme.</span>
-            </div>
+        <div class="calc-card highlight">
+          <span class="card-type">RIVELO AU LANCEMENT</span>
+          <span class="price-display">239,20 $</span>
+          <ul class="calc-list">
+            <li>Payé une seule fois, à vous pour de bon</li>
+            <li>500 000 flashs, chez vous, à votre horaire</li>
+            <li>Livraison gratuite partout au Canada</li>
+          </ul>
+        </div>
+      </div>
+      <div class="calc-footnote">Fourchette de prix indicative pour un traitement complet en clinique au Canada. Les résultats varient d'une personne à l'autre.</div>
+    </section>
+
+    <!-- SECTION : POUR ELLE / POUR LUI -->
+    <section class="audience-section">
+      <div class="audience-header">
+        <span class="subtitle-top">Pour qui ?</span>
+        <h2>Pour elle. Pour lui.<br><span>Pour toute la maison.</span></h2>
+        <p>Un seul appareil, 500 000 flashs : assez pour être partagé entre deux personnes pendant des années.</p>
+      </div>
+
+      <div class="audience-grid">
+        <!-- CARTE POUR ELLE -->
+        <div class="audience-card">
+          <span class="audience-badge">Pour elle</span>
+          <h3>Des jambes douces, sans y penser.</h3>
+          <p>Fini le rasage tous les deux jours, les coupures et les rendez-vous d'esthéticienne à caser dans l'agenda.</p>
+          
+          <div class="tags-container">
+            <span class="tag">Jambes</span>
+            <span class="tag">Aisselles</span>
+            <span class="tag">Maillot</span>
+            <span class="tag">Bras</span>
+            <span class="tag">Visage (sous les pommettes)</span>
           </div>
+
+          <ul class="audience-benefits">
+            <li><span>✓</span> Prête pour une robe, un maillot ou un voyage, sans planifier</li>
+            <li><span>✓</span> Moins de poils incarnés et de rougeurs après rasage</li>
+            <li><span>✓</span> Une séance par semaine, chez vous, quand vous voulez</li>
+          </ul>
+        </div>
+
+        <!-- CARTE POUR LUI -->
+        <div class="audience-card">
+          <span class="audience-badge">Pour lui</span>
+          <h3>Un corps net, sans corvée.</h3>
+          <p>Torse, dos ou épaules : les zones difficiles à raser et coûteuses à traiter en clinique, gérées en privé chez soi.</p>
+          
+          <div class="tags-container">
+            <span class="tag">Torse</span>
+            <span class="tag">Dos</span>
+            <span class="tag">Épaules</span>
+            <span class="tag">Nuque</span>
+            <span class="tag">Aisselles</span>
+            <span class="tag">Bras</span>
+          </div>
+
+          <ul class="audience-benefits">
+            <li><span>✓</span> Plus besoin de demander de l'aide pour le dos</li>
+            <li><span>✓</span> Fini les irritations du rasage sur le torse</li>
+            <li><span>✓</span> Discret : personne n'a besoin de savoir, pas de rendez-vous</li>
+          </ul>
         </div>
       </div>
     </section>
@@ -895,6 +1279,19 @@
     </section>
   </main>
 
+  <!-- STICKY BOTTOM BAR -->
+  <div class="sticky-footer-bar">
+    <div class="sticky-left">
+      <span>Lancement dans</span>
+      <span id="sticky-timer">36j 13h 11 min 21 s</span>
+    </div>
+    <div class="sticky-center">
+      <span class="old-p">299 $</span>
+      <span class="new-p">239,20 $</span>
+    </div>
+    <a href="#" class="sticky-btn">MON CODE -20%</a>
+  </div>
+
   <footer>
     <p>© 2026 Rivelo. Tous droits réservés.</p>
   </footer>
@@ -914,10 +1311,20 @@
         const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
         const seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
-        document.getElementById("days").innerText = days < 10 ? '0' + days : days;
-        document.getElementById("hours").innerText = hours < 10 ? '0' + hours : hours;
-        document.getElementById("mins").innerText = minutes < 10 ? '0' + minutes : minutes;
-        document.getElementById("secs").innerText = seconds < 10 ? '0' + seconds : seconds;
+        const daysStr = days < 10 ? '0' + days : days;
+        const hoursStr = hours < 10 ? '0' + hours : hours;
+        const minsStr = minutes < 10 ? '0' + minutes : minutes;
+        const secsStr = seconds < 10 ? '0' + seconds : seconds;
+
+        document.getElementById("days").innerText = daysStr;
+        document.getElementById("hours").innerText = hoursStr;
+        document.getElementById("mins").innerText = minsStr;
+        document.getElementById("secs").innerText = secsStr;
+
+        const stickyTimer = document.getElementById("sticky-timer");
+        if(stickyTimer) {
+          stickyTimer.innerText = `${daysStr}j ${hoursStr}h ${minsStr} min ${secsStr} s`;
+        }
       }
     }
 
