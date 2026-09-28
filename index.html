@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rivelo — Épilation IPL à domicile</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&display=swap" rel="stylesheet">
+    
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: #2e2a39;
+            color: #fdfbf7;
+            font-family: 'Poppins', sans-serif;
+            line-height: 1.6;
+            padding-bottom: 120px;
+        }
+
+        .riv-landing {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        /* HERO SECTION */
+        .riv-hero {
+            text-align: center;
+            padding-bottom: 50px;
+            max-width: 680px;
+            margin: 0 auto;
+        }
+
+        .riv-badge {
+            display: inline-block;
+            background: rgba(255, 255, 255, 0.08);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            padding: 6px 16px;
+            border-radius: 50px;
+            font-size: 13px;
+            font-weight: 500;
+            margin-bottom: 24px;
+        }
+
+        .riv-hero h1 {
+            font-size: clamp(2.2rem, 4.5vw, 3.2rem);
+            font-weight: 500;
+            letter-spacing: -0.02em;
+            margin-bottom: 20px;
+            line-height: 1.15;
+        }
+
+        .riv-hero h1 span {
+            font-style: italic;
+        }
+
+        .riv-subtitle {
+            font-size: 1rem;
+            opacity: 0.8;
+            margin-bottom: 30px;
+            line-height: 1.6;
+        }
+
+        /* PRICE BOX */
+        .riv-price-box {
+            background: rgba(255, 255, 255, 0.04);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 20px;
+            padding: 24px;
+            margin-bottom: 25px;
+        }
+
+        .riv-price-row {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 15px;
+            margin-bottom: 12px;
+        }
+
+        .riv-old-price {
+            text-decoration: line-through;
+            opacity: 0.5;
+            font-size: 1.2rem;
+        }
+
+        .riv-new-price {
+            font-size: 2.2rem;
+            font-weight: 700;
+            color: #fdfbf7;
+        }
+
+        .riv-tag {
+            background: #ffb5a7;
+            color: #2e2a39;
+            font-size: 11px;
+            font-weight: 700;
+            padding: 4px 10px;
+            border-radius: 6px;
+        }
+
+        .riv-countdown {
+            font-size: 0.9rem;
+            opacity: 0.9;
+        }
+
+        /* FORM */
+        .riv-input-group {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        @media(min-width: 600px) {
+            .riv-input-group {
+                flex-direction: row;
+            }
+        }
+
+        .riv-input-group input {
+            flex: 1;
+            padding: 16px 20px;
+            border-radius: 12px;
+            border: 1px solid rgba(255, 255, 255, 0.25);
+            background: rgba(255, 255, 255, 0.06);
+            color: #fff;
+            font-size: 1rem;
+            outline: none;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .riv-input-group input:focus {
+            border-color: #ffb5a7;
+        }
+
+        .riv-cta-button {
+            background: #ffb5a7;
+            color: #2e2a39;
+            border: none;
+            padding: 16px 28px;
+            border-radius: 12px;
+            font-weight: 700;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: transform 0.2s ease, background 0.2s ease;
+            white-space: nowrap;
+        }
+
+        .riv-cta-button:hover {
+            background: #ff9e8c;
+            transform: translateY(-2px);
+        }
+
+        .riv-reassurance-micro {
+            margin-top: 15px;
+            font-size: 12px;
+            opacity: 0.7;
+            display: flex;
+            justify-content: center;
+            gap: 12px;
+        }
+
+        /* SECTIONS */
+        .riv-section {
+            margin: 70px 0;
+        }
+
+        .riv-section h2 {
+            text-align: center;
+            font-size: clamp(1.8rem, 3vw, 2.4rem);
+            margin-bottom: 40px;
+            font-weight: 500;
+            letter-spacing: -0.01em;
+        }
+
+        /* COMPARISON GRID */
+        .riv-grid-2 {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 24px;
+        }
+
+        @media(min-width: 768px) {
+            .riv-grid-2 {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        .riv-card {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: 20px;
+            padding: 35px 30px;
+        }
+
+        .riv-card-highlight {
+            background: rgba(255, 255, 255, 0.07);
+            border: 1px solid rgba(255, 181, 167, 0.4);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+        }
+
+        .riv-card h3 {
+            font-size: 1.25rem;
+            margin-bottom: 20px;
+            font-weight: 600;
+        }
+
+        .riv-card ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .riv-card li {
+            margin-bottom: 18px;
+            font-size: 0.95rem;
+            line-height: 1.5;
+            opacity: 0.85;
+        }
+
+        .riv-card-highlight li {
+            opacity: 1;
+        }
+
+        /* STEPS GRID */
+        .riv-steps-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 20px;
+        }
+
+        @media(min-width: 768px) {
+            .riv-steps-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+
+        .riv-step {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: 16px;
+            padding: 30px 24px;
+        }
+
+        .riv-step-num {
+            font-size: 1.4rem;
+            font-weight: 700;
+            color: #ffb5a7;
+            display: block;
+            margin-bottom: 12px;
+        }
+
+        .riv-step h4 {
+            font-size: 1.1rem;
+            margin-bottom: 10px;
+            font-weight: 600;
+        }
+
+        .riv-step p {
+            font-size: 0.9rem;
+            opacity: 0.75;
+        }
+
+        /* STICKY FOOTER BAR */
+        .riv-sticky-bar {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background: rgba(46, 42, 57, 0.85);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            padding: 15px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 1000;
+        }
+
+        .riv-sticky-content {
+            max-width: 900px;
+            margin: 0 auto;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .riv-sticky-info {
+            font-size: 0.85rem;
+            opacity: 0.9;
+        }
+
+        .riv-sticky-info strong {
+            color: #ffb5a7;
+        }
+
+        @media(max-width: 600px) {
+            .riv-sticky-bar {
+                padding: 12px 15px;
+            }
+            .riv-sticky-info {
+                display: none;
+            }
+            .riv-sticky-content {
+                justify-content: center;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="riv-landing">
+        <!-- HERO SECTION -->
+        <header class="riv-hero">
+            <div class="riv-badge">🔥 Déjà 350+ personnes inscrites sur la liste d'attente</div>
+            <h1>Une peau parfaitement lisse.<br><span>Directement chez vous.</span></h1>
+            <p class="riv-subtitle">Libérez-vous des contraintes du rasage quotidien et des rendez-vous coûteux en institut grâce à la technologie IPL haute précision.</p>
+            
+            <div class="riv-price-box">
+                <div class="riv-price-row">
+                    <span class="riv-old-price">299 $</span>
+                    <span class="riv-new-price">239,20 $</span>
+                    <span class="riv-tag">-20 % AU LANCEMENT</span>
+                </div>
+                <div class="riv-countdown">
+                    <span>Ouverture des ventes dans : <strong>36j 14h 29m 22s</strong></span>
+                </div>
+            </div>
+
+            <div class="riv-form-container">
+                <form method="post" action="#" class="contact-form">
+                    <div class="riv-input-group">
+                        <input type="email" name="email" placeholder="Votre adresse courriel" required>
+                        <button type="submit" class="riv-cta-button">OBTENIR MON CODE -20 % →</button>
+                    </div>
+                </form>
+                <div class="riv-reassurance-micro">
+                    <span>✓ Gratuit</span> • <span>✓ Sans engagement</span> • <span>✓ Accès prioritaire 72h</span>
+                </div>
+            </div>
+        </header>
+
+        <!-- COMPARISON SECTION -->
+        <section class="riv-section">
+            <h2>Pourquoi repenser votre routine ?</h2>
+            <div class="riv-grid-2">
+                <div class="riv-card">
+                    <h3>Méthodes traditionnelles</h3>
+                    <ul>
+                        <li>❌ <strong>Des centaines de dollars dépensés</strong> : Abonnements récurrents en institut ou achats continus de rasoirs jetables.</li>
+                        <li>❌ <strong>Rougeurs et poils incarnés</strong> : Une friction permanente et un inconfort cutané après chaque rasage.</li>
+                        <li>❌ <strong>Une contrainte de temps</strong> : Devoir recommencer tous les 2 ou 3 jours pour maintenir un résultat temporaire.</li>
+                    </ul>
+                </div>
+                <div class="riv-card riv-card-highlight">
+                    <h3>L'approche RIVELO</h3>
+                    <ul>
+                        <li>✔️ <strong>Un investissement unique</strong> : Un seul appareil amorti dès les premières semaines d'utilisation à la maison.</li>
+                        <li>✔️ <strong>Douceur & technologie indolore</strong> : Conçu pour respecter la sensibilité de votre peau en ciblant le poil à la racine.</li>
+                        <li>✔️ <strong>Résultats visibles dès 2 à 4 semaines</strong> : Une réduction progressive et durable de la pilosité, à votre rythme.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- PROTOCOL SECTION -->
+        <section class="riv-section">
+            <h2>Une peau lisse en 3 étapes.</h2>
+            <div class="riv-steps-grid">
+                <div class="riv-step">
+                    <span class="riv-step-num">01</span>
+                    <h4>Préparez la zone.</h4>
+                    <p>Rasez de près la zone à traiter pour que la lumière atteigne directement le follicule pileux sous la peau.</p>
+                </div>
+                <div class="riv-step">
+                    <span class="riv-step-num">02</span>
+                    <h4>Flashez avec RIVELO.</h4>
+                    <p>Sélectionnez l'intensité adaptée à votre carnation et balayez la zone. L'appareil émet des flashs en continu.</p>
+                </div>
+                <div class="riv-step">
+                    <span class="riv-step-num">03</span>
+                    <h4>Hydratez & admirez.</h4>
+                    <p>Appliquez votre soin hydratant habituel. Répétez une fois par semaine pour constater la réduction de la pilosité.</p>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- STICKY FOOTER BAR -->
+    <div class="riv-sticky-bar">
+        <div class="riv-sticky-content">
+            <div class="riv-sticky-info">
+                Lancement le 3 novembre • <strong>-20 % réservé aux inscrits</strong>
+            </div>
+            <a href="#" style="background: #ffb5a7; color: #2e2a39; padding: 10px 20px; border-radius: 8px; text-decoration: none; font-weight: 700; font-size: 0.9rem;">MON CODE -20 %</a>
+        </div>
+    </div>
+
+</body>
+</html>
