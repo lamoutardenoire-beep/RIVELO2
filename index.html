@@ -177,7 +177,7 @@
       letter-spacing: 0.05em;
     }
 
-    /* Form Box optimisé neuromarketing */
+    /* Form Box */
     .form-box {
       background: var(--card-bg);
       border: 1px solid rgba(242, 166, 166, 0.3);
@@ -325,19 +325,19 @@
       text-transform: uppercase;
     }
 
-    /* SECTION : CE QUI CHANGE POUR VOUS */
-    .value-props-section {
+    /* SECTIONS GÉNÉRALES */
+    section {
       max-width: 1100px;
-      margin: 80px auto 40px;
+      margin: 70px auto;
       padding: 0 20px;
     }
 
-    .value-props-header {
+    .section-header {
       text-align: center;
-      margin-bottom: 50px;
+      margin-bottom: 40px;
     }
 
-    .value-props-header span {
+    .section-header span {
       text-transform: uppercase;
       letter-spacing: 0.2em;
       font-size: 0.75rem;
@@ -347,194 +347,128 @@
       font-weight: 600;
     }
 
-    .value-props-header h2 {
+    .section-header h2 {
       font-family: 'Playfair Display', serif;
-      font-size: 2.8rem;
+      font-size: 2.6rem;
       font-weight: 400;
       line-height: 1.2;
     }
 
-    .value-props-header h2 span {
+    .section-header h2 span {
       font-style: italic;
       color: var(--accent-pink);
       display: block;
     }
 
+    .section-header p {
+      color: var(--text-muted);
+      font-size: 0.95rem;
+      max-width: 650px;
+      margin: 15px auto 0;
+    }
+
+    /* 4 MÉTRIQUES CLÉS */
     .value-props-grid {
       display: grid;
       grid-template-columns: 1fr;
       gap: 16px;
     }
-
     @media (min-width: 768px) {
-      .value-props-grid {
-        grid-template-columns: repeat(4, 1fr);
-      }
+      .value-props-grid { grid-template-columns: repeat(4, 1fr); }
     }
-
     .value-prop-card {
       background: var(--card-bg);
       border: 1px solid var(--border-color);
       border-radius: 12px;
-      padding: 30px 20px;
-      text-align: left;
+      padding: 25px 20px;
     }
-
     .value-prop-card .big-num {
       font-family: 'Playfair Display', serif;
-      font-size: 2.5rem;
+      font-size: 2.2rem;
       font-weight: 600;
       color: var(--text-main);
       display: block;
       margin-bottom: 4px;
-      line-height: 1;
     }
-
     .value-prop-card .prop-title {
-      font-size: 0.95rem;
+      font-size: 0.9rem;
       font-weight: 600;
       color: var(--accent-pink);
-      margin-bottom: 12px;
+      margin-bottom: 8px;
       display: block;
     }
-
     .value-prop-card .prop-desc {
-      font-size: 0.82rem;
+      font-size: 0.8rem;
       color: var(--text-muted);
-      line-height: 1.45;
     }
 
-    /* SECTION : LE CALCUL (Remonté stratégiquement pour maximiser la conversion) */
-    .calculation-section {
-      max-width: 1100px;
-      margin: 80px auto;
-      padding: 0 20px;
-    }
-
-    .calculation-header {
-      text-align: center;
-      margin-bottom: 50px;
-    }
-
-    .calculation-header span {
-      text-transform: uppercase;
-      letter-spacing: 0.2em;
-      font-size: 0.75rem;
-      color: var(--text-muted);
-      margin-bottom: 10px;
-      display: block;
-      font-weight: 600;
-    }
-
-    .calculation-header h2 {
-      font-family: 'Playfair Display', serif;
-      font-size: 2.8rem;
-      font-weight: 400;
-      line-height: 1.2;
-    }
-
-    .calculation-header h2 span {
-      font-style: italic;
-      color: var(--accent-pink);
-      display: block;
-    }
-
-    .calculation-header p {
-      color: var(--text-muted);
-      font-size: 0.95rem;
-      max-width: 650px;
-      margin: 15px auto 0;
-      line-height: 1.5;
-    }
-
+    /* LE CALCUL (COMPARATEUR) */
     .calc-grid {
       display: grid;
       grid-template-columns: 1fr;
       gap: 24px;
     }
-
     @media (min-width: 768px) {
-      .calc-grid {
-        grid-template-columns: 1fr 1fr;
-      }
+      .calc-grid { grid-template-columns: 1fr 1fr; }
     }
-
     .calc-card {
       background: var(--card-bg);
       border: 1px solid var(--border-color);
       border-radius: 16px;
-      padding: 40px 30px;
-      position: relative;
+      padding: 35px 25px;
     }
-
     .calc-card.highlight {
       background: linear-gradient(180deg, rgba(242, 166, 166, 0.05) 0%, rgba(19, 23, 31, 1) 100%);
       border: 1px solid rgba(242, 166, 166, 0.4);
     }
-
     .calc-card .card-type {
       text-transform: uppercase;
       font-size: 0.68rem;
       letter-spacing: 0.15em;
       font-weight: 700;
       color: var(--text-muted);
-      margin-bottom: 15px;
+      margin-bottom: 12px;
       display: block;
     }
-
-    .calc-card.highlight .card-type {
-      color: var(--accent-pink);
-    }
-
+    .calc-card.highlight .card-type { color: var(--accent-pink); }
     .calc-card .price-display {
       font-family: 'Playfair Display', serif;
-      font-size: 2.5rem;
+      font-size: 2.3rem;
       font-weight: 600;
       color: var(--text-main);
-      margin-bottom: 25px;
+      margin-bottom: 20px;
       display: block;
     }
-
-    .calc-card.highlight .price-display {
-      color: var(--accent-pink);
-    }
-
+    .calc-card.highlight .price-display { color: var(--accent-pink); }
     .calc-list {
       list-style: none;
       display: flex;
       flex-direction: column;
-      gap: 16px;
+      gap: 12px;
       border-top: 1px solid var(--border-color);
-      padding-top: 25px;
+      padding-top: 20px;
     }
-
     .calc-list li {
-      font-size: 0.9rem;
+      font-size: 0.88rem;
       color: var(--text-muted);
       display: flex;
       align-items: center;
       gap: 10px;
     }
-
-    .calc-card.highlight .calc-list li {
-      color: var(--text-main);
-    }
-
+    .calc-card.highlight .calc-list li { color: var(--text-main); }
     .calc-footnote {
       text-align: center;
       font-size: 0.72rem;
       color: var(--text-muted);
-      margin-top: 20px;
+      margin-top: 15px;
     }
 
     /* BANNIÈRE D'URGENCE INTERMÉDIAIRE */
     .urgent-banner-section {
-      max-width: 1100px;
-      margin: 60px auto;
-      padding: 40px 30px;
       background: var(--card-bg-alt);
       border: 1px solid var(--border-color);
       border-radius: 16px;
+      padding: 35px 30px;
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -542,26 +476,16 @@
       gap: 20px;
       text-align: center;
     }
-
     @media(min-width: 768px) {
-      .urgent-banner-section {
-        flex-direction: row;
-        text-align: left;
-      }
+      .urgent-banner-section { flex-direction: row; text-align: left; }
     }
-
     .urgent-banner-section h3 {
       font-family: 'Playfair Display', serif;
-      font-size: 1.8rem;
+      font-size: 1.6rem;
       font-weight: 400;
-      margin-bottom: 6px;
+      margin-bottom: 4px;
     }
-
-    .urgent-banner-section p {
-      color: var(--text-muted);
-      font-size: 0.88rem;
-    }
-
+    .urgent-banner-section p { color: var(--text-muted); font-size: 0.85rem; }
     .urgent-btn {
       background: var(--bg-banner);
       color: var(--text-banner);
@@ -570,473 +494,194 @@
       font-weight: 700;
       font-size: 0.85rem;
       text-decoration: none;
-      letter-spacing: 0.05em;
       white-space: nowrap;
-      transition: background 0.2s ease;
+      transition: background 0.2s;
     }
+    .urgent-btn:hover { background: #fff; }
 
-    .urgent-btn:hover {
-      background: #ffffff;
-    }
-
-    /* SECTION MODE D'EMPLOI */
-    .how-it-works-section {
-      max-width: 1100px;
-      margin: 60px auto;
-      padding: 0 20px;
+    /* MODE D'EMPLOI (3 ÉTAPES) */
+    .how-it-works-grid {
       display: grid;
       grid-template-columns: 1fr;
-      gap: 40px;
+      gap: 30px;
       align-items: center;
     }
-
-    @media (min-width: 768px) {
-      .how-it-works-section {
-        grid-template-columns: 0.9fr 1.1fr;
-      }
+    @media(min-width: 768px) {
+      .how-it-works-grid { grid-template-columns: 1fr 1fr; }
     }
-
     .product-showcase-img {
       width: 100%;
-      max-width: 400px;
+      max-width: 380px;
       display: block;
       margin: 0 auto;
-      border-radius: 20px;
+      border-radius: 16px;
       filter: drop-shadow(0 15px 30px rgba(0,0,0,0.4));
     }
-
     .steps-list {
       display: flex;
       flex-direction: column;
-      gap: 25px;
+      gap: 20px;
     }
-
     .step-item {
       display: flex;
-      gap: 20px;
+      gap: 16px;
       align-items: flex-start;
+      background: var(--card-bg);
+      border: 1px solid var(--border-color);
+      padding: 20px;
+      border-radius: 12px;
     }
-
     .step-number {
       background: rgba(242, 166, 166, 0.1);
       color: var(--accent-pink);
       border: 1px solid rgba(242, 166, 166, 0.3);
       font-weight: 700;
-      font-size: 1.1rem;
-      width: 42px;
-      height: 42px;
+      font-size: 1rem;
+      width: 36px;
+      height: 36px;
       border-radius: 50%;
       display: flex;
       align-items: center;
       justify-content: center;
       flex-shrink: 0;
     }
+    .step-content h4 { font-size: 1rem; font-weight: 600; color: #fff; margin-bottom: 3px; }
+    .step-content p { font-size: 0.82rem; color: var(--text-muted); line-height: 1.4; }
 
-    .step-content h4 {
-      font-size: 1.05rem;
-      font-weight: 600;
-      color: #fff;
-      margin-bottom: 4px;
-    }
-
-    .step-content p {
-      font-size: 0.88rem;
-      color: var(--text-muted);
-      line-height: 1.5;
-    }
-
-    /* SECTION : POUR ELLE / POUR LUI */
-    .audience-section {
-      max-width: 1100px;
-      margin: 80px auto;
-      padding: 0 20px;
-    }
-
-    .audience-header {
-      text-align: center;
-      margin-bottom: 50px;
-    }
-
-    .audience-header .subtitle-top {
-      text-transform: uppercase;
-      letter-spacing: 0.2em;
-      font-size: 0.75rem;
-      color: var(--text-muted);
-      margin-bottom: 10px;
-      display: block;
-      font-weight: 600;
-    }
-
-    .audience-header h2 {
-      font-family: 'Playfair Display', serif;
-      font-size: 2.8rem;
-      font-weight: 400;
-      line-height: 1.2;
-      margin-bottom: 15px;
-    }
-
-    .audience-header h2 span {
-      font-style: italic;
-      color: var(--accent-pink);
-      display: block;
-    }
-
-    .audience-header p {
-      color: var(--text-muted);
-      font-size: 0.95rem;
-      max-width: 600px;
-      margin: 0 auto;
-    }
-
+    /* POUR ELLE / POUR LUI */
     .audience-grid {
       display: grid;
       grid-template-columns: 1fr;
-      gap: 30px;
+      gap: 24px;
     }
-
     @media (min-width: 768px) {
-      .audience-grid {
-        grid-template-columns: 1fr 1fr;
-      }
+      .audience-grid { grid-template-columns: 1fr 1fr; }
     }
-
     .audience-card {
       background: var(--card-bg);
       border: 1px solid var(--border-color);
       border-radius: 16px;
-      padding: 40px 30px;
-      position: relative;
+      padding: 35px 25px;
     }
-
     .audience-badge {
       display: inline-block;
       text-transform: uppercase;
-      font-size: 0.68rem;
+      font-size: 0.65rem;
       letter-spacing: 0.15em;
       font-weight: 700;
       color: var(--accent-pink);
       background: rgba(242, 166, 166, 0.1);
       border: 1px solid rgba(242, 166, 166, 0.2);
-      padding: 4px 12px;
+      padding: 4px 10px;
       border-radius: 50px;
-      margin-bottom: 20px;
+      margin-bottom: 15px;
     }
-
     .audience-card h3 {
       font-family: 'Playfair Display', serif;
-      font-size: 1.8rem;
+      font-size: 1.6rem;
       font-weight: 400;
-      margin-bottom: 15px;
-      line-height: 1.3;
+      margin-bottom: 12px;
     }
-
-    .audience-card > p {
-      color: var(--text-muted);
-      font-size: 0.9rem;
-      margin-bottom: 25px;
-      line-height: 1.5;
-    }
-
+    .audience-card > p { color: var(--text-muted); font-size: 0.88rem; margin-bottom: 20px; }
     .tags-container {
       display: flex;
       flex-wrap: wrap;
-      gap: 8px;
-      margin-bottom: 30px;
-      padding-bottom: 25px;
+      gap: 6px;
+      margin-bottom: 20px;
+      padding-bottom: 20px;
       border-bottom: 1px solid var(--border-color);
     }
-
     .tag {
       background: rgba(255, 255, 255, 0.04);
       border: 1px solid var(--border-color);
       color: var(--text-main);
-      font-size: 0.78rem;
-      padding: 6px 12px;
+      font-size: 0.75rem;
+      padding: 4px 10px;
       border-radius: 6px;
     }
+    .audience-benefits { list-style: none; display: flex; flex-direction: column; gap: 12px; }
+    .audience-benefits li { display: flex; align-items: flex-start; gap: 10px; font-size: 0.88rem; color: var(--text-main); }
+    .audience-benefits li span { color: var(--accent-pink); font-weight: bold; }
 
-    .audience-benefits {
-      list-style: none;
-      display: flex;
-      flex-direction: column;
-      gap: 16px;
-    }
-
-    .audience-benefits li {
-      display: flex;
-      align-items: flex-start;
-      gap: 12px;
-      font-size: 0.9rem;
-      color: var(--text-main);
-    }
-
-    .audience-benefits li span {
-      color: var(--accent-pink);
-      font-weight: bold;
-    }
-
-    /* BENEFITS SECTION (3 CARTES) */
-    .benefits-section {
-      max-width: 1100px;
-      margin: 60px auto;
-      padding: 0 20px;
-    }
-
-    .benefits-header {
-      text-align: center;
-      margin-bottom: 40px;
-    }
-
-    .benefits-header span {
-      text-transform: uppercase;
-      letter-spacing: 0.2em;
-      font-size: 0.75rem;
-      color: var(--text-muted);
-      margin-bottom: 10px;
-      display: block;
-      font-weight: 600;
-    }
-
-    .benefits-header h2 {
-      font-family: 'Playfair Display', serif;
-      font-size: 2.8rem;
-      font-weight: 400;
-      line-height: 1.2;
-    }
-
-    .benefits-header h2 span {
-      font-style: italic;
-      color: var(--accent-pink);
-      display: block;
-    }
-
-    .benefits-grid {
+    /* GRILLES 3 ET 6 CARTES (CONDENSÉES) */
+    .compact-grid-3 {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
       gap: 20px;
     }
-
-    .benefit-card {
+    .compact-card-3 {
       background: var(--card-bg-alt);
       border: 1px solid var(--border-color);
-      padding: 35px 30px;
+      padding: 30px 25px;
       border-radius: 12px;
-      position: relative;
     }
-
-    .benefit-card .card-num {
+    .compact-card-3 .card-num {
       font-family: 'Playfair Display', serif;
       font-style: italic;
       color: var(--accent-pink);
-      font-size: 1.2rem;
-      margin-bottom: 15px;
-      display: block;
-    }
-
-    .benefit-card h3 {
-      font-size: 1.2rem;
-      margin-bottom: 12px;
-      color: var(--text-main);
-      font-weight: 600;
-    }
-
-    .benefit-card p {
-      font-size: 0.88rem;
-      color: var(--text-muted);
-      line-height: 1.5;
-    }
-
-    /* TECHNOLOGY SECTION (6 CARTES) */
-    .tech-section {
-      max-width: 1100px;
-      margin: 80px auto;
-      padding: 0 20px;
-    }
-
-    .tech-header {
-      text-align: center;
-      margin-bottom: 50px;
-    }
-
-    .tech-header span {
-      text-transform: uppercase;
-      letter-spacing: 0.2em;
-      font-size: 0.75rem;
-      color: var(--text-muted);
-      margin-bottom: 10px;
-      display: block;
-      font-weight: 600;
-    }
-
-    .tech-header h2 {
-      font-family: 'Playfair Display', serif;
-      font-size: 2.8rem;
-      font-weight: 400;
-      line-height: 1.2;
-    }
-
-    .tech-header h2 span {
-      font-style: italic;
-      color: var(--accent-pink);
-      display: block;
-    }
-
-    .tech-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-      gap: 20px;
-    }
-
-    .tech-card {
-      background: var(--card-bg);
-      border: 1px solid var(--border-color);
-      padding: 30px;
-      border-radius: 12px;
-    }
-
-    .tech-card h3 {
       font-size: 1.1rem;
       margin-bottom: 10px;
-      color: var(--text-main);
-      font-weight: 600;
-    }
-
-    .tech-card p {
-      font-size: 0.85rem;
-      color: var(--text-muted);
-      line-height: 1.5;
-    }
-
-    /* SECTION : VOUS NE RISQUEZ RIEN (4 POINTS) */
-    .risk-free-section {
-      max-width: 1100px;
-      margin: 80px auto;
-      padding: 0 20px;
-    }
-
-    .risk-free-header {
-      text-align: center;
-      margin-bottom: 50px;
-    }
-
-    .risk-free-header span {
-      text-transform: uppercase;
-      letter-spacing: 0.2em;
-      font-size: 0.75rem;
-      color: var(--text-muted);
-      margin-bottom: 10px;
-      display: block;
-      font-weight: 600;
-    }
-
-    .risk-free-header h2 {
-      font-family: 'Playfair Display', serif;
-      font-size: 2.8rem;
-      font-weight: 400;
-      line-height: 1.2;
-    }
-
-    .risk-free-header h2 span {
-      font-style: italic;
-      color: var(--accent-pink);
       display: block;
     }
+    .compact-card-3 h3 { font-size: 1.1rem; margin-bottom: 8px; color: var(--text-main); font-weight: 600; }
+    .compact-card-3 p { font-size: 0.85rem; color: var(--text-muted); line-height: 1.4; }
 
+    .compact-grid-6 {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 16px;
+    }
+    .compact-card-6 {
+      background: var(--card-bg);
+      border: 1px solid var(--border-color);
+      padding: 24px;
+      border-radius: 12px;
+    }
+    .compact-card-6 h3 { font-size: 1rem; margin-bottom: 6px; color: var(--text-main); font-weight: 600; }
+    .compact-card-6 p { font-size: 0.82rem; color: var(--text-muted); line-height: 1.4; }
+
+    /* SECTION RISQUE ZÉRO (4 POINTS) */
     .risk-free-grid {
       display: grid;
       grid-template-columns: 1fr;
-      gap: 20px;
+      gap: 16px;
     }
-
     @media (min-width: 768px) {
-      .risk-free-grid {
-        grid-template-columns: 1fr 1fr;
-      }
+      .risk-free-grid { grid-template-columns: 1fr 1fr; }
     }
-
     .risk-free-card {
       background: var(--card-bg);
       border: 1px solid var(--border-color);
-      padding: 35px 30px;
+      padding: 30px 25px;
       border-radius: 12px;
-      position: relative;
     }
-
     .risk-free-card .rf-num {
       font-family: 'Playfair Display', serif;
       font-style: italic;
       color: var(--accent-pink);
-      font-size: 1.2rem;
-      margin-bottom: 15px;
+      font-size: 1.1rem;
+      margin-bottom: 10px;
       display: block;
     }
+    .risk-free-card h3 { font-size: 1.1rem; margin-bottom: 8px; color: var(--text-main); font-weight: 600; }
+    .risk-free-card p { font-size: 0.85rem; color: var(--text-muted); line-height: 1.4; }
+    .risk-free-card p b { color: var(--text-main); }
 
-    .risk-free-card h3 {
-      font-size: 1.2rem;
-      margin-bottom: 12px;
-      color: var(--text-main);
-      font-weight: 600;
-    }
-
-    .risk-free-card p {
-      font-size: 0.88rem;
-      color: var(--text-muted);
-      line-height: 1.5;
-    }
-
-    .risk-free-card p b {
-      color: var(--text-main);
-    }
-
-    .risk-free-cta-container {
-      text-align: center;
-      margin-top: 40px;
-    }
-
-    .risk-free-btn {
-      background: var(--bg-banner);
-      color: var(--text-banner);
-      padding: 16px 32px;
-      border-radius: 8px;
-      font-weight: 700;
-      font-size: 0.9rem;
-      text-decoration: none;
-      letter-spacing: 0.05em;
-      transition: background 0.2s ease;
-      display: inline-block;
-    }
-
-    .risk-free-btn:hover {
-      background: #ffffff;
-    }
-
-    /* BLOC RARETÉ FINAL */
+    /* RARETÉ FINAL & GARANTIES */
     .rarity-block {
-      max-width: 1100px;
-      margin: 60px auto;
-      padding: 50px 30px;
       background: var(--card-bg-alt);
       border: 1px solid var(--border-color);
       border-radius: 16px;
+      padding: 40px 25px;
       text-align: center;
       display: flex;
       flex-direction: column;
       align-items: center;
-      gap: 20px;
+      gap: 15px;
     }
-
-    .rarity-block h3 {
-      font-family: 'Playfair Display', serif;
-      font-size: 2.2rem;
-      font-weight: 400;
-    }
-
-    .rarity-block p {
-      color: var(--text-muted);
-      font-size: 0.9rem;
-    }
-
-    .rarity-btn {
+    .rarity-block h3 { font-family: 'Playfair Display', serif; font-size: 2rem; font-weight: 400; }
+    .rarity-block p { color: var(--text-muted); font-size: 0.88rem; }
+    .rarity-btn, .risk-free-btn {
       background: var(--bg-banner);
       color: var(--text-banner);
       padding: 14px 28px;
@@ -1044,95 +689,49 @@
       font-weight: 700;
       font-size: 0.85rem;
       text-decoration: none;
-      letter-spacing: 0.05em;
-      transition: background 0.2s ease;
+      transition: background 0.2s;
     }
-
-    .rarity-btn:hover {
-      background: #ffffff;
-    }
-
-    /* GARANTIES */
-    .guarantees-section {
-      max-width: 1100px;
-      margin: 40px auto;
-      padding: 0 20px;
-    }
+    .rarity-btn:hover, .risk-free-btn:hover { background: #fff; }
 
     .guarantees-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-      gap: 20px;
+      gap: 16px;
       background: rgba(242, 166, 166, 0.03);
       border: 1px solid rgba(242, 166, 166, 0.2);
       border-radius: 16px;
-      padding: 30px;
+      padding: 25px;
     }
-
-    .guarantee-item {
-      display: flex;
-      gap: 16px;
-      align-items: flex-start;
-    }
-
+    .guarantee-item { display: flex; gap: 14px; align-items: flex-start; }
     .guarantee-icon {
-      display: flex;
-      align-items: center;
-      justify-content: center;
       background: rgba(242, 166, 166, 0.1);
       color: var(--accent-pink);
-      padding: 12px;
-      border-radius: 10px;
+      padding: 10px;
+      border-radius: 8px;
       border: 1px solid rgba(242, 166, 166, 0.2);
       flex-shrink: 0;
     }
-
-    .guarantee-content h4 {
-      font-size: 0.95rem;
-      font-weight: 600;
-      color: #fff;
-      margin-bottom: 4px;
-    }
-
-    .guarantee-content p {
-      font-size: 0.82rem;
-      color: var(--text-muted);
-      line-height: 1.4;
-    }
+    .guarantee-content h4 { font-size: 0.9rem; font-weight: 600; color: #fff; margin-bottom: 2px; }
+    .guarantee-content p { font-size: 0.78rem; color: var(--text-muted); line-height: 1.35; }
 
     /* FAQ */
-    .faq-section {
-      max-width: 800px;
-      margin: 60px auto;
-      padding: 0 20px;
-    }
-
-    .faq-container {
-      display: flex;
-      flex-direction: column;
-      gap: 12px;
-      margin-top: 30px;
-    }
-
+    .faq-section { max-width: 800px; }
+    .faq-container { display: flex; flex-direction: column; gap: 10px; margin-top: 25px; }
     .faq-item {
       background: var(--card-bg);
       border: 1px solid var(--border-color);
       border-radius: 10px;
       overflow: hidden;
-      transition: border-color 0.2s ease;
+      transition: border-color 0.2s;
     }
-
-    .faq-item.active {
-      border-color: rgba(242, 166, 166, 0.4);
-    }
-
+    .faq-item.active { border-color: rgba(242, 166, 166, 0.4); }
     .faq-question {
       width: 100%;
       text-align: left;
       background: transparent;
       color: #fff;
-      padding: 18px 20px;
-      font-size: 0.95rem;
+      padding: 16px 20px;
+      font-size: 0.92rem;
       font-weight: 600;
       border: none;
       display: flex;
@@ -1140,31 +739,18 @@
       align-items: center;
       cursor: pointer;
     }
-
-    .faq-icon {
-      font-size: 1.2rem;
-      color: var(--accent-pink);
-      transition: transform 0.3s ease;
-    }
-
-    .faq-item.active .faq-icon {
-      transform: rotate(45deg);
-    }
-
+    .faq-icon { font-size: 1.1rem; color: var(--accent-pink); transition: transform 0.3s; }
+    .faq-item.active .faq-icon { transform: rotate(45deg); }
     .faq-answer {
       max-height: 0;
       overflow: hidden;
       transition: max-height 0.3s ease, padding 0.3s ease;
       padding: 0 20px;
       color: var(--text-muted);
-      font-size: 0.88rem;
+      font-size: 0.85rem;
       line-height: 1.5;
     }
-
-    .faq-item.active .faq-answer {
-      max-height: 300px;
-      padding: 0 20px 20px 20px;
-    }
+    .faq-item.active .faq-answer { max-height: 300px; padding: 0 20px 20px 20px; }
 
     /* STICKY BOTTOM BAR */
     .sticky-footer-bar {
@@ -1181,44 +767,12 @@
       z-index: 1000;
       box-shadow: 0 -10px 30px rgba(0,0,0,0.5);
     }
-
-    .sticky-left {
-      display: flex;
-      flex-direction: column;
-      gap: 2px;
-    }
-
-    .sticky-left span:first-child {
-      font-size: 0.65rem;
-      text-transform: uppercase;
-      letter-spacing: 0.1em;
-      color: var(--text-muted);
-    }
-
-    .sticky-left span:last-child {
-      font-size: 0.85rem;
-      font-weight: 600;
-      color: var(--text-main);
-    }
-
-    .sticky-center {
-      display: flex;
-      align-items: center;
-      gap: 12px;
-    }
-
-    .sticky-center .old-p {
-      text-decoration: line-through;
-      color: var(--text-muted);
-      font-size: 0.85rem;
-    }
-
-    .sticky-center .new-p {
-      font-weight: 700;
-      color: var(--accent-pink);
-      font-size: 1.2rem;
-    }
-
+    .sticky-left { display: flex; flex-direction: column; gap: 2px; }
+    .sticky-left span:first-child { font-size: 0.65rem; text-transform: uppercase; letter-spacing: 0.1em; color: var(--text-muted); }
+    .sticky-left span:last-child { font-size: 0.85rem; font-weight: 600; color: var(--text-main); }
+    .sticky-center { display: flex; align-items: center; gap: 12px; }
+    .sticky-center .old-p { text-decoration: line-through; color: var(--text-muted); font-size: 0.85rem; }
+    .sticky-center .new-p { font-weight: 700; color: var(--accent-pink); font-size: 1.2rem; }
     .sticky-btn {
       background: var(--bg-banner);
       color: var(--text-banner);
@@ -1227,21 +781,11 @@
       font-weight: 700;
       font-size: 0.8rem;
       text-decoration: none;
-      letter-spacing: 0.05em;
-      transition: background 0.2s ease;
+      transition: background 0.2s;
     }
+    .sticky-btn:hover { background: #fff; }
 
-    .sticky-btn:hover {
-      background: #ffffff;
-    }
-
-    footer {
-      text-align: center;
-      padding: 30px 20px;
-      border-top: 1px solid var(--border-color);
-      color: var(--text-muted);
-      font-size: 0.8rem;
-    }
+    footer { text-align: center; padding: 30px 20px; border-top: 1px solid var(--border-color); color: var(--text-muted); font-size: 0.8rem; }
   </style>
 </head>
 <body>
@@ -1256,10 +800,9 @@
 
   <main>
     <!-- HERO SECTION -->
-    <section class="hero-container">
+    <section class="hero-container" style="margin: 20px auto;">
       <div class="hero-content">
         <span class="category-subtitle">— ÉPILATION IPL À DOMICILE</span>
-        
         <h1>Une peau parfaitement lisse. <span>Directement chez vous.</span></h1>
         
         <div class="price-tag">
@@ -1272,13 +815,11 @@
           Libérez-vous des contraintes du rasage quotidien et des rendez-vous coûteux en institut grâce à la technologie IPL haute précision.
         </p>
 
-        <!-- Social Proof Bar -->
         <div class="social-proof-bar">
           <span class="badge-hype">🔥 Lancement VIP :</span>
           <span style="color: #e5e7eb;">Déjà <b>350+ personnes</b> inscrites sur la liste d'attente</span>
         </div>
 
-        <!-- Form Box -->
         <div class="form-box">
           <p>Réservez votre tarif préférentiel avant le lancement officiel :</p>
           <form class="input-group" onsubmit="event.preventDefault(); alert('Merci ! Votre réservation est enregistrée.');">
@@ -1297,31 +838,17 @@
           </div>
         </div>
 
-        <!-- Timer -->
         <div class="countdown-container">
           <div class="countdown-title">Ouverture des ventes dans :</div>
           <div class="timer">
-            <div class="time-unit">
-              <span class="number" id="days">36</span>
-              <span class="label">Jours</span>
-            </div>
-            <div class="time-unit">
-              <span class="number" id="hours">13</span>
-              <span class="label">Heures</span>
-            </div>
-            <div class="time-unit">
-              <span class="number" id="mins">12</span>
-              <span class="label">Min</span>
-            </div>
-            <div class="time-unit">
-              <span class="number" id="secs">55</span>
-              <span class="label">Sec</span>
-            </div>
+            <div class="time-unit"><span class="number" id="days">36</span><span class="label">Jours</span></div>
+            <div class="time-unit"><span class="number" id="hours">13</span><span class="label">Heures</span></div>
+            <div class="time-unit"><span class="number" id="mins">12</span><span class="label">Min</span></div>
+            <div class="time-unit"><span class="number" id="secs">55</span><span class="label">Sec</span></div>
           </div>
         </div>
       </div>
 
-      <!-- Vidéo démo -->
       <div class="visual-box">
         <video autoplay loop muted playsinline class="product-video">
           <source src="rivelo-demo.mp4" type="video/mp4">
@@ -1331,44 +858,26 @@
     </section>
 
     <!-- SECTION : CE QUI CHANGE POUR VOUS -->
-    <section class="value-props-section">
-      <div class="value-props-header">
+    <section>
+      <div class="section-header">
         <span>CE QUI CHANGE POUR VOUS</span>
         <h2>Moins de temps à y penser. <span>Plus de confiance.</span></h2>
       </div>
-
       <div class="value-props-grid">
-        <div class="value-prop-card">
-          <span class="big-num">1×</span>
-          <span class="prop-title">par semaine</span>
-          <p class="prop-desc">Au lieu d'un rasage tous les 2 ou 3 jours.</p>
-        </div>
-        <div class="value-prop-card">
-          <span class="big-num">0</span>
-          <span class="prop-title">rendez-vous</span>
-          <p class="prop-desc">Pas de déplacement, pas d'horaire à respecter, pas de salle d'attente.</p>
-        </div>
-        <div class="value-prop-card">
-          <span class="big-num">2–4</span>
-          <span class="prop-title">semaines</span>
-          <p class="prop-desc">Pour voir les premiers résultats avec une utilisation régulière.</p>
-        </div>
-        <div class="value-prop-card">
-          <span class="big-num">1</span>
-          <span class="prop-title">seul achat</span>
-          <p class="prop-desc">Un appareil à vous, qui remplace rasoirs, cire et forfaits.</p>
-        </div>
+        <div class="value-prop-card"><span class="big-num">1×</span><span class="prop-title">par semaine</span><p class="prop-desc">Au lieu d'un rasage tous les 2 ou 3 jours.</p></div>
+        <div class="value-prop-card"><span class="big-num">0</span><span class="prop-title">rendez-vous</span><p class="prop-desc">Pas de déplacement, pas d'horaire à respecter, pas de salle d'attente.</p></div>
+        <div class="value-prop-card"><span class="big-num">2–4</span><span class="prop-title">semaines</span><p class="prop-desc">Pour voir les premiers résultats avec une utilisation régulière.</p></div>
+        <div class="value-prop-card"><span class="big-num">1</span><span class="prop-title">seul achat</span><p class="prop-desc">Un appareil à vous, qui remplace rasoirs, cire et forfaits.</p></div>
       </div>
     </section>
 
-    <!-- SECTION : LE CALCUL (Remonté directement après les métriques clés, standard US) -->
-    <section class="calculation-section">
-      <div class="calculation-header">
+    <!-- SECTION : LE CALCUL -->
+    <section>
+      <div class="section-header">
         <span>LE CALCUL</span>
         <h2>Le même principe. <span>Une fraction du prix.</span></h2>
         <p>L'épilation définitive en clinique se paie en milliers de dollars, séance après séance. RIVELO se paie une seule fois.</p>
       </div>
-
       <div class="calc-grid">
         <div class="calc-card">
           <span class="card-type">TRAITEMENT LASER EN CLINIQUE</span>
@@ -1379,7 +888,6 @@
             <li>À payer à chaque forfait</li>
           </ul>
         </div>
-
         <div class="calc-card highlight">
           <span class="card-type">RIVELO AU LANCEMENT</span>
           <span class="price-display">239,20 $</span>
@@ -1393,7 +901,7 @@
       <div class="calc-footnote">Fourchette de prix indicative pour un traitement complet en clinique au Canada. Les résultats varient d'une personne à l'autre.</div>
     </section>
 
-    <!-- BANNIÈRE D'URGENCE INTERMÉDIAIRE -->
+    <!-- BANNIÈRE D'URGENCE -->
     <section class="urgent-banner-section">
       <div>
         <h3>Économisez 59,80 $ au lancement.</h3>
@@ -1402,91 +910,46 @@
       <a href="#" class="urgent-btn">OBTENIR MON CODE -20% →</a>
     </section>
 
-    <!-- SECTION MODE D'EMPLOI -->
-    <section class="how-it-works-section">
-      <div class="product-image-container">
-        <img src="rivelo-product.png" alt="Appareil Rivelo IPL" class="product-showcase-img">
-      </div>
-      
-      <div class="how-it-works-content">
-        <span class="category-subtitle">— PROTOCOLE SIMPLE</span>
-        <h2 style="font-family: 'Playfair Display', serif; font-size: 2rem; margin-bottom: 25px; font-weight: 400;">
-          Une peau lisse en 3 étapes.
-        </h2>
-
-        <div class="steps-list">
-          <div class="step-item">
-            <div class="step-number">1</div>
-            <div class="step-content">
-              <h4>Préparez la zone</h4>
-              <p>Rasez de près la zone à traiter pour que la lumière atteigne directement le follicule pileux sous la peau.</p>
-            </div>
-          </div>
-
-          <div class="step-item">
-            <div class="step-number">2</div>
-            <div class="step-content">
-              <h4>Flashez avec Rivelo</h4>
-              <p>Sélectionnez l'intensité adaptée à votre carnation et balayez la zone. L'appareil émet les flashs en continu.</p>
-            </div>
-          </div>
-
-          <div class="step-item">
-            <div class="step-number">3</div>
-            <div class="step-content">
-              <h4>Hydratez & Admirez</h4>
-              <p>Appliquez votre soin hydratant habituel. Répétez une fois par semaine pour constater la réduction de la pilosité.</p>
-            </div>
+    <!-- MODE D'EMPLOI -->
+    <section>
+      <div class="how-it-works-grid">
+        <div><img src="rivelo-product.png" alt="Appareil Rivelo IPL" class="product-showcase-img"></div>
+        <div>
+          <span class="category-subtitle">— PROTOCOLE SIMPLE</span>
+          <h2 style="font-family: 'Playfair Display', serif; font-size: 2rem; margin-bottom: 20px; font-weight: 400;">Une peau lisse en 3 étapes.</h2>
+          <div class="steps-list">
+            <div class="step-item"><div class="step-number">1</div><div class="step-content"><h4>Préparez la zone</h4><p>Rasez de près la zone à traiter pour que la lumière atteigne directement le follicule pileux sous la peau.</p></div></div>
+            <div class="step-item"><div class="step-number">2</div><div class="step-content"><h4>Flashez avec Rivelo</h4><p>Sélectionnez l'intensité adaptée à votre carnation et balayez la zone. L'appareil émet les flashs en continu.</p></div></div>
+            <div class="step-item"><div class="step-number">3</div><div class="step-content"><h4>Hydratez & Admirez</h4><p>Appliquez votre soin hydratant habituel. Répétez une fois par semaine pour constater la réduction de la pilosité.</p></div></div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- SECTION : POUR ELLE / POUR LUI -->
-    <section class="audience-section">
-      <div class="audience-header">
-        <span class="subtitle-top">Pour qui ?</span>
+    <!-- POUR ELLE / POUR LUI -->
+    <section>
+      <div class="section-header">
+        <span>Pour qui ?</span>
         <h2>Pour elle. Pour lui.<br><span>Pour toute la maison.</span></h2>
         <p>Un seul appareil, 500 000 flashs : assez pour être partagé entre deux personnes pendant des années.</p>
       </div>
-
       <div class="audience-grid">
-        <!-- CARTE POUR ELLE -->
         <div class="audience-card">
           <span class="audience-badge">Pour elle</span>
           <h3>Des jambes douces, sans y penser.</h3>
           <p>Fini le rasage tous les deux jours, les coupures et les rendez-vous d'esthéticienne à caser dans l'agenda.</p>
-          
-          <div class="tags-container">
-            <span class="tag">Jambes</span>
-            <span class="tag">Aisselles</span>
-            <span class="tag">Maillot</span>
-            <span class="tag">Bras</span>
-            <span class="tag">Visage (sous les pommettes)</span>
-          </div>
-
+          <div class="tags-container"><span class="tag">Jambes</span><span class="tag">Aisselles</span><span class="tag">Maillot</span><span class="tag">Bras</span><span class="tag">Visage (sous les pommettes)</span></div>
           <ul class="audience-benefits">
             <li><span>✓</span> Prête pour une robe, un maillot ou un voyage, sans planifier</li>
             <li><span>✓</span> Moins de poils incarnés et de rougeurs après rasage</li>
             <li><span>✓</span> Une séance par semaine, chez vous, quand vous voulez</li>
           </ul>
         </div>
-
-        <!-- CARTE POUR LUI -->
         <div class="audience-card">
           <span class="audience-badge">Pour lui</span>
           <h3>Un corps net, sans corvée.</h3>
           <p>Torse, dos ou épaules : les zones difficiles à raser et coûteuses à traiter en clinique, gérées en privé chez soi.</p>
-          
-          <div class="tags-container">
-            <span class="tag">Torse</span>
-            <span class="tag">Dos</span>
-            <span class="tag">Épaules</span>
-            <span class="tag">Nuque</span>
-            <span class="tag">Aisselles</span>
-            <span class="tag">Bras</span>
-          </div>
-
+          <div class="tags-container"><span class="tag">Torse</span><span class="tag">Dos</span><span class="tag">Épaules</span><span class="tag">Nuque</span><span class="tag">Aisselles</span><span class="tag">Bras</span></div>
           <ul class="audience-benefits">
             <li><span>✓</span> Plus besoin de demander de l'aide pour le dos</li>
             <li><span>✓</span> Fini les irritations du rasage sur le torse</li>
@@ -1496,224 +959,116 @@
       </div>
     </section>
 
-    <!-- BENEFITS SECTION (3 CARTES) -->
-    <section class="benefits-section">
-      <div class="benefits-header">
+    <!-- POURQUOI RIVELO (3 CARTES) -->
+    <section>
+      <div class="section-header">
         <span>POURQUOI RIVELO</span>
         <h2>Pensé pour durer. <span>Disponible en quantité limitée.</span></h2>
       </div>
-
-      <div class="benefits-grid">
-        <div class="benefit-card">
-          <span class="card-num">01</span>
-          <h3>Technologie professionnelle</h3>
-          <p>Une technologie de lumière pulsée sécurisée, pensée pour une utilisation simple et rapide directement à domicile.</p>
-        </div>
-        <div class="benefit-card">
-          <span class="card-num">02</span>
-          <h3>Économie à long terme</h3>
-          <p>Rentabilisé dès les premières séances comparativement aux rendez-vous récurrents en institut spécialisé.</p>
-        </div>
-        <div class="benefit-card">
-          <span class="card-num">03</span>
-          <h3>Série limitée</h3>
-          <p>Seulement <b>500 unités</b> réservées pour la première vague d'expédition du 3 novembre.</p>
-        </div>
+      <div class="compact-grid-3">
+        <div class="compact-card-3"><span class="card-num">01</span><h3>Technologie professionnelle</h3><p>Une technologie de lumière pulsée sécurisée, pensée pour une utilisation simple et rapide directement à domicile.</p></div>
+        <div class="compact-card-3"><span class="card-num">02</span><h3>Économie à long terme</h3><p>Rentabilisé dès les premières séances comparativement aux rendez-vous récurrents en institut spécialisé.</p></div>
+        <div class="compact-card-3"><span class="card-num">03</span><h3>Série limitée</h3><p>Seulement <b>500 unités</b> réservées pour la première vague d'expédition du 3 novembre.</p></div>
       </div>
     </section>
 
-    <!-- TECH SECTION (6 CARTES) -->
-    <section class="tech-section">
-      <div class="tech-header">
+    <!-- TECH (6 CARTES) -->
+    <section>
+      <div class="section-header">
         <span>PENSÉ POUR VOTRE EXPÉRIENCE</span>
         <h2>De la technologie, <span>sans la complication.</span></h2>
       </div>
-
-      <div class="tech-grid">
-        <div class="tech-card">
-          <h3>Refroidissement intégré</h3>
-          <p>Une fonction de refroidissement pensée pour accompagner la peau pendant votre routine.</p>
-        </div>
-        <div class="tech-card">
-          <h3>Détection du teint</h3>
-          <p>Le mode automatique détecte le teint et aide à adapter le niveau d'énergie approprié.</p>
-        </div>
-        <div class="tech-card">
-          <h3>Capteur de contact</h3>
-          <p>Le flash se déclenche lorsque la fenêtre de traitement est bien en contact avec la peau.</p>
-        </div>
-        <div class="tech-card">
-          <h3>3 niveaux d'intensité</h3>
-          <p>Adaptez l'utilisation selon la zone et votre tolérance.</p>
-        </div>
-        <div class="tech-card">
-          <h3>500 000 flashs</h3>
-          <p>Une capacité pensée pour accompagner votre routine sur la durée.</p>
-        </div>
-        <div class="tech-card">
-          <h3>Chez vous</h3>
-          <p>Votre appareil à portée de main, selon votre horaire. Sans rendez-vous.</p>
-        </div>
+      <div class="compact-grid-6">
+        <div class="compact-card-6"><h3>Refroidissement intégré</h3><p>Une fonction de refroidissement pensée pour accompagner la peau pendant votre routine.</p></div>
+        <div class="compact-card-6"><h3>Détection du teint</h3><p>Le mode automatique détecte le teint et aide à adapter le niveau d'énergie approprié.</p></div>
+        <div class="compact-card-6"><h3>Capteur de contact</h3><p>Le flash se déclenche lorsque la fenêtre de traitement est bien en contact avec la peau.</p></div>
+        <div class="compact-card-6"><h3>3 niveaux d'intensité</h3><p>Adaptez l'utilisation selon la zone et votre tolérance.</p></div>
+        <div class="compact-card-6"><h3>500 000 flashs</h3><p>Une capacité pensée pour accompagner votre routine sur la durée.</p></div>
+        <div class="compact-card-6"><h3>Chez vous</h3><p>Votre appareil à portée de main, selon votre horaire. Sans rendez-vous.</p></div>
       </div>
     </section>
 
-    <!-- SECTION : VOUS NE RISQUEZ RIEN (4 POINTS) -->
-    <section class="risk-free-section">
-      <div class="risk-free-header">
+    <!-- VOUS NE RISQUEZ RIEN (4 POINTS) -->
+    <section>
+      <div class="section-header">
         <span>POURQUOI S'INSCRIRE AUJOURD'HUI</span>
         <h2>Vous ne risquez rien. <span>Vous gagnez 59,80 $.</span></h2>
       </div>
-
       <div class="risk-free-grid">
-        <div class="risk-free-card">
-          <span class="rf-num">01</span>
-          <h3>Le meilleur prix ne reviendra pas.</h3>
-          <p>Le -20 % est réservé aux inscrits de la liste, pendant <b>72 heures seulement</b>. Après le 6 novembre, RIVELO revient à 299 $.</p>
-        </div>
-        <div class="risk-free-card">
-          <span class="rf-num">02</span>
-          <h3>La première vague est limitée.</h3>
-          <p><b>500 appareils</b> pour le lancement. Les inscrits reçoivent le code en premier, avant tout le monde.</p>
-        </div>
-        <div class="risk-free-card">
-          <span class="rf-num">03</span>
-          <h3>L'inscription ne vous engage à rien.</h3>
-          <p>Un courriel suffit. <b>Aucun paiement</b> aujourd'hui, aucune carte demandée. Vous décidez le 3 novembre.</p>
-        </div>
-        <div class="risk-free-card">
-          <span class="rf-num">04</span>
-          <h3>Tout est inclus à la commande.</h3>
-          <p><b>Livraison gratuite</b> partout au Canada et <b>garantie appareil 1 an</b>, sans frais cachés.</p>
-        </div>
+        <div class="risk-free-card"><span class="rf-num">01</span><h3>Le meilleur prix ne reviendra pas.</h3><p>Le -20 % est réservé aux inscrits de la liste, pendant <b>72 heures seulement</b>. Après le 6 novembre, RIVELO revient à 299 $.</p></div>
+        <div class="risk-free-card"><span class="rf-num">02</span><h3>La première vague est limitée.</h3><p><b>500 appareils</b> pour le lancement. Les inscrits reçoivent le code en premier, avant tout le monde.</p></div>
+        <div class="risk-free-card"><span class="rf-num">03</span><h3>L'inscription ne vous engage à rien.</h3><p>Un courriel suffit. <b>Aucun paiement</b> aujourd'hui, aucune carte demandée. Vous décidez le 3 novembre.</p></div>
+        <div class="risk-free-card"><span class="rf-num">04</span><h3>Tout est inclus à la commande.</h3><p><b>Livraison gratuite</b> partout au Canada et <b>garantie appareil 1 an</b>, sans frais cachés.</p></div>
       </div>
-
-      <div class="risk-free-cta-container">
+      <div style="text-align: center; margin-top: 30px;">
         <a href="#" class="risk-free-btn">JE M'INSCRIS GRATUITEMENT →</a>
       </div>
     </section>
 
-    <!-- BLOC RARETÉ FINAL -->
-    <div class="rarity-block">
-      <h3>Seulement 500 appareils dans la première vague.</h3>
-      <p>Les inscrits reçoivent leur code en premier, le 3 novembre à 19 h.</p>
-      <a href="#" class="rarity-btn">RÉSERVER MA PLACE →</a>
-    </div>
+    <!-- RARETÉ FINAL -->
+    <section>
+      <div class="rarity-block">
+        <h3>Seulement 500 appareils dans la première vague.</h3>
+        <p>Les inscrits reçoivent leur code en premier, le 3 novembre à 19 h.</p>
+        <a href="#" class="rarity-btn">RÉSERVER MA PLACE →</a>
+      </div>
+    </section>
 
     <!-- GARANTIES -->
-    <section class="guarantees-section">
+    <section>
       <div class="guarantees-grid">
         <div class="guarantee-item">
-          <div class="guarantee-icon">
-            <i data-lucide="shield-check"></i>
-          </div>
-          <div class="guarantee-content">
-            <h4>Garantie 90 Jours</h4>
-            <p>Essayez Rivelo sans risque. Si vous n'observez pas de résultats, nous vous remboursons intégralement.</p>
-          </div>
+          <div class="guarantee-icon"><i data-lucide="shield-check"></i></div>
+          <div class="guarantee-content"><h4>Garantie 90 Jours</h4><p>Essayez Rivelo sans risque. Si vous n'observez pas de résultats, nous vous remboursons intégralement.</p></div>
         </div>
         <div class="guarantee-item">
-          <div class="guarantee-icon">
-            <i data-lucide="truck"></i>
-          </div>
-          <div class="guarantee-content">
-            <h4>Livraison Gratuite</h4>
-            <p>Expédition rapide et suivie sans frais cachés partout au Canada et en France.</p>
-          </div>
+          <div class="guarantee-icon"><i data-lucide="truck"></i></div>
+          <div class="guarantee-content"><h4>Livraison Gratuite</h4><p>Expédition rapide et suivie sans frais cachés partout au Canada et en France.</p></div>
         </div>
         <div class="guarantee-item">
-          <div class="guarantee-icon">
-            <i data-lucide="zap"></i>
-          </div>
-          <div class="guarantee-content">
-            <h4>Garantie Appareil 2 Ans</h4>
-            <p>Remplacement à neuf immédiat en cas de pépin technique sur votre appareil IPL.</p>
-          </div>
+          <div class="guarantee-icon"><i data-lucide="zap"></i></div>
+          <div class="guarantee-content"><h4>Garantie Appareil 2 Ans</h4><p>Remplacement à neuf immédiat en cas de pépin technique sur votre appareil IPL.</p></div>
         </div>
       </div>
     </section>
 
     <!-- FAQ -->
     <section class="faq-section">
-      <h2 class="section-title">Questions Fréquentes</h2>
+      <div class="section-header" style="text-align: left; margin-bottom: 20px;">
+        <h2>Questions Fréquentes</h2>
+      </div>
       <div class="faq-container">
         <div class="faq-item">
-          <button class="faq-question">
-            <span>Est-ce que l'utilisation de l'IPL RIVELO est douloureuse ?</span>
-            <span class="faq-icon">+</span>
-          </button>
-          <div class="faq-answer">
-            <p>Non. Contrairement à la cire ou aux lasers professionnels d'ancienne génération, RIVELO émet un flash lumineux doux ciblant directement le pigment du poil à la racine sans agresser la surface de la peau. La plupart des utilisateurs ressentent seulement une légère sensation de chaleur passagère.</p>
-          </div>
+          <button class="faq-question"><span>Est-ce que l'utilisation de l'IPL RIVELO est douloureuse ?</span><span class="faq-icon">+</span></button>
+          <div class="faq-answer"><p>Non. Contrairement à la cire ou aux lasers professionnels d'ancienne génération, RIVELO émet un flash lumineux doux ciblant directement le pigment du poil à la racine sans agresser la surface de la peau. La plupart des utilisateurs ressentent seulement une légère sensation de chaleur passagère.</p></div>
         </div>
-
         <div class="faq-item">
-          <button class="faq-question">
-            <span>Quand vais-je voir les premiers résultats ?</span>
-            <span class="faq-icon">+</span>
-          </button>
-          <div class="faq-answer">
-            <p>Les premiers résultats visibles apparaissent généralement après 2 à 4 semaines d'utilisation régulière, à raison d'une séance par semaine. La repousse devient plus lente et les poils nettement plus fins. Les résultats peuvent varier d'une personne à l'autre.</p>
-          </div>
+          <button class="faq-question"><span>Quand vais-je voir les premiers résultats ?</span><span class="faq-icon">+</span></button>
+          <div class="faq-answer"><p>Les premiers résultats visibles apparaissent généralement après 2 à 4 semaines d'utilisation régulière, à raison d'une séance par semaine. La repousse devient plus lente et les poils nettement plus fins. Les résultats peuvent varier d'une personne à l'autre.</p></div>
         </div>
-
         <div class="faq-item">
-          <button class="faq-question">
-            <span>Sur quelles zones du corps puis-je l'utiliser ?</span>
-            <span class="faq-icon">+</span>
-          </button>
-          <div class="faq-answer">
-            <p>RIVELO est conçu pour une utilisation sur l'ensemble du corps : jambes, aisselles, maillot, bras, torse, dos et visage (en dessous des pommettes).</p>
-          </div>
+          <button class="faq-question"><span>Sur quelles zones du corps puis-je l'utiliser ?</span><span class="faq-icon">+</span></button>
+          <div class="faq-answer"><p>RIVELO est conçu pour une utilisation sur l'ensemble du corps : jambes, aisselles, maillot, bras, torse, dos et visage (en dessous des pommettes).</p></div>
         </div>
-
         <div class="faq-item">
-          <button class="faq-question">
-            <span>Est-ce que RIVELO fonctionne aussi pour les hommes ?</span>
-            <span class="faq-icon">+</span>
-          </button>
-          <div class="faq-answer">
-            <p>Oui. Torse, dos, épaules, nuque, aisselles ou bras : RIVELO s'utilise de la même façon. Les mêmes conditions de compatibilité s'appliquent (couleur du poil et teint de peau).</p>
-          </div>
+          <button class="faq-question"><span>Est-ce que RIVELO fonctionne aussi pour les hommes ?</span><span class="faq-icon">+</span></button>
+          <div class="faq-answer"><p>Oui. Torse, dos, épaules, nuque, aisselles ou bras : RIVELO s'utilise de la même façon. Les mêmes conditions de compatibilité s'appliquent (couleur du poil et teint de peau).</p></div>
         </div>
-
         <div class="faq-item">
-          <button class="faq-question">
-            <span>Peut-on partager l'appareil à deux ?</span>
-            <span class="faq-icon">+</span>
-          </button>
-          <div class="faq-answer">
-            <p>Oui. Avec 500 000 flashs, un seul appareil peut servir à deux personnes du même foyer.</p>
-          </div>
+          <button class="faq-question"><span>Peut-on partager l'appareil à deux ?</span><span class="faq-icon">+</span></button>
+          <div class="faq-answer"><p>Oui. Avec 500 000 flashs, un seul appareil peut servir à deux personnes du même foyer.</p></div>
         </div>
-
         <div class="faq-item">
-          <button class="faq-question">
-            <span>RIVELO convient-il à tout le monde ?</span>
-            <span class="faq-icon">+</span>
-          </button>
-          <div class="faq-answer">
-            <p>L'IPL agit sur la mélanine présente dans le poil : il n'est pas adapté à toutes les couleurs de poils ni à tous les teints. Consultez le guide de compatibilité et les instructions avant utilisation.</p>
-          </div>
+          <button class="faq-question"><span>RIVELO convient-il à tout le monde ?</span><span class="faq-icon">+</span></button>
+          <div class="faq-answer"><p>L'IPL agit sur la mélanine présente dans le poil : il n'est pas adapté à toutes les couleurs de poils ni à tous les teints. Consultez le guide de compatibilité et les instructions avant utilisation.</p></div>
         </div>
-
         <div class="faq-item">
-          <button class="faq-question">
-            <span>Comment fonctionne la réduction de −20 % au lancement ?</span>
-            <span class="faq-icon">+</span>
-          </button>
-          <div class="faq-answer">
-            <p>En vous inscrivant aujourd'hui, votre adresse courriel est enregistrée sur la liste prioritaire. Le 3 novembre à 19 h, vous recevrez un code promotionnel personnel valide pendant 72 heures pour commander votre appareil au tarif VIP de 239,20 $ au lieu de 299 $.</p>
-          </div>
+          <button class="faq-question"><span>Comment fonctionne la réduction de −20 % au lancement ?</span><span class="faq-icon">+</span></button>
+          <div class="faq-answer"><p>En vous inscrivant aujourd'hui, votre adresse courriel est enregistrée sur la liste prioritaire. Le 3 novembre à 19 h, vous recevrez un code promotionnel personnel valide pendant 72 heures pour commander votre appareil au tarif VIP de 239,20 $ au lieu de 299 $.</p></div>
         </div>
-
         <div class="faq-item">
-          <button class="faq-question">
-            <span>La livraison est-elle vraiment gratuite ?</span>
-            <span class="faq-icon">+</span>
-          </button>
-          <div class="faq-answer">
-            <p>Oui, la livraison est gratuite et suivie partout au Canada.</p>
-          </div>
+          <button class="faq-question"><span>La livraison est-elle vraiment gratuite ?</span><span class="faq-icon">+</span></button>
+          <div class="faq-answer"><p>Oui, la livraison est gratuite et suivie partout au Canada.</p></div>
         </div>
       </div>
     </section>
