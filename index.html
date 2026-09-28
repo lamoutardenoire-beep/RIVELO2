@@ -24,17 +24,28 @@
         }
 
         .riv-landing {
-            max-width: 900px;
+            max-width: 1000px;
             margin: 0 auto;
             padding: 40px 20px;
         }
 
-        /* HERO SECTION */
-        .riv-hero {
-            text-align: center;
-            padding-bottom: 50px;
-            max-width: 680px;
-            margin: 0 auto;
+        /* HERO SECTION AVEC VIDÉO */
+        .riv-hero-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 40px;
+            align-items: center;
+            padding-bottom: 60px;
+        }
+
+        @media(min-width: 850px) {
+            .riv-hero-grid {
+                grid-template-columns: 1.1fr 0.9fr;
+            }
+        }
+
+        .riv-hero-content {
+            text-align: left;
         }
 
         .riv-badge {
@@ -45,53 +56,69 @@
             border-radius: 50px;
             font-size: 13px;
             font-weight: 500;
-            margin-bottom: 24px;
+            margin-bottom: 20px;
         }
 
-        .riv-hero h1 {
-            font-size: clamp(2.2rem, 4.5vw, 3.2rem);
+        .riv-hero-content h1 {
+            font-size: clamp(2.2rem, 4vw, 3rem);
             font-weight: 500;
             letter-spacing: -0.02em;
-            margin-bottom: 20px;
+            margin-bottom: 18px;
             line-height: 1.15;
         }
 
-        .riv-hero h1 span {
+        .riv-hero-content h1 span {
             font-style: italic;
         }
 
         .riv-subtitle {
             font-size: 1rem;
             opacity: 0.8;
-            margin-bottom: 30px;
+            margin-bottom: 25px;
             line-height: 1.6;
+        }
+
+        /* CONTENEUR VIDÉO */
+        .riv-video-container {
+            width: 100%;
+            border-radius: 20px;
+            overflow: hidden;
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            box-shadow: 0 15px 35px rgba(0,0,0,0.25);
+            background: rgba(0,0,0,0.2);
+        }
+
+        .riv-video-container video {
+            width: 100%;
+            height: auto;
+            display: block;
+            border-radius: 20px;
         }
 
         /* PRICE BOX */
         .riv-price-box {
             background: rgba(255, 255, 255, 0.04);
             border: 1px solid rgba(255, 255, 255, 0.1);
-            border-radius: 20px;
-            padding: 24px;
-            margin-bottom: 25px;
+            border-radius: 16px;
+            padding: 20px;
+            margin-bottom: 20px;
         }
 
         .riv-price-row {
             display: flex;
             align-items: center;
-            justify-content: center;
             gap: 15px;
-            margin-bottom: 12px;
+            margin-bottom: 8px;
         }
 
         .riv-old-price {
             text-decoration: line-through;
             opacity: 0.5;
-            font-size: 1.2rem;
+            font-size: 1.1rem;
         }
 
         .riv-new-price {
-            font-size: 2.2rem;
+            font-size: 2rem;
             font-weight: 700;
             color: #fdfbf7;
         }
@@ -106,7 +133,7 @@
         }
 
         .riv-countdown {
-            font-size: 0.9rem;
+            font-size: 0.85rem;
             opacity: 0.9;
         }
 
@@ -117,7 +144,7 @@
             gap: 12px;
         }
 
-        @media(min-width: 600px) {
+        @media(min-width: 500px) {
             .riv-input-group {
                 flex-direction: row;
             }
@@ -125,12 +152,12 @@
 
         .riv-input-group input {
             flex: 1;
-            padding: 16px 20px;
+            padding: 15px 18px;
             border-radius: 12px;
             border: 1px solid rgba(255, 255, 255, 0.25);
             background: rgba(255, 255, 255, 0.06);
             color: #fff;
-            font-size: 1rem;
+            font-size: 0.95rem;
             outline: none;
             font-family: 'Poppins', sans-serif;
         }
@@ -143,10 +170,10 @@
             background: #ffb5a7;
             color: #2e2a39;
             border: none;
-            padding: 16px 28px;
+            padding: 15px 24px;
             border-radius: 12px;
             font-weight: 700;
-            font-size: 1rem;
+            font-size: 0.95rem;
             cursor: pointer;
             transition: transform 0.2s ease, background 0.2s ease;
             white-space: nowrap;
@@ -158,11 +185,10 @@
         }
 
         .riv-reassurance-micro {
-            margin-top: 15px;
+            margin-top: 12px;
             font-size: 12px;
             opacity: 0.7;
             display: flex;
-            justify-content: center;
             gap: 12px;
         }
 
@@ -285,7 +311,7 @@
         }
 
         .riv-sticky-content {
-            max-width: 900px;
+            max-width: 1000px;
             margin: 0 auto;
             width: 100%;
             display: flex;
@@ -318,33 +344,43 @@
 <body>
 
     <div class="riv-landing">
-        <!-- HERO SECTION -->
-        <header class="riv-hero">
-            <div class="riv-badge">🔥 Déjà 350+ personnes inscrites sur la liste d'attente</div>
-            <h1>Une peau parfaitement lisse.<br><span>Directement chez vous.</span></h1>
-            <p class="riv-subtitle">Libérez-vous des contraintes du rasage quotidien et des rendez-vous coûteux en institut grâce à la technologie IPL haute précision.</p>
-            
-            <div class="riv-price-box">
-                <div class="riv-price-row">
-                    <span class="riv-old-price">299 $</span>
-                    <span class="riv-new-price">239,20 $</span>
-                    <span class="riv-tag">-20 % AU LANCEMENT</span>
+        <!-- HERO SECTION AVEC VIDÉO INTÉGRÉE -->
+        <header class="riv-hero-grid">
+            <div class="riv-hero-content">
+                <div class="riv-badge">🔥 Déjà 350+ personnes inscrites sur la liste d'attente</div>
+                <h1>Une peau parfaitement lisse.<br><span>Directement chez vous.</span></h1>
+                <p class="riv-subtitle">Libérez-vous des contraintes du rasage quotidien et des rendez-vous coûteux en institut grâce à la technologie IPL haute précision.</p>
+                
+                <div class="riv-price-box">
+                    <div class="riv-price-row">
+                        <span class="riv-old-price">299 $</span>
+                        <span class="riv-new-price">239,20 $</span>
+                        <span class="riv-tag">-20 % AU LANCEMENT</span>
+                    </div>
+                    <div class="riv-countdown">
+                        <span>Ouverture des ventes dans : <strong>36j 14h 29m 22s</strong></span>
+                    </div>
                 </div>
-                <div class="riv-countdown">
-                    <span>Ouverture des ventes dans : <strong>36j 14h 29m 22s</strong></span>
+
+                <div class="riv-form-container">
+                    <form method="post" action="#" class="contact-form">
+                        <div class="riv-input-group">
+                            <input type="email" name="email" placeholder="Votre adresse courriel" required>
+                            <button type="submit" class="riv-cta-button">OBTENIR MON CODE →</button>
+                        </div>
+                    </form>
+                    <div class="riv-reassurance-micro">
+                        <span>✓ Gratuit</span> • <span>✓ Sans engagement</span> • <span>✓ Accès prioritaire 72h</span>
+                    </div>
                 </div>
             </div>
 
-            <div class="riv-form-container">
-                <form method="post" action="#" class="contact-form">
-                    <div class="riv-input-group">
-                        <input type="email" name="email" placeholder="Votre adresse courriel" required>
-                        <button type="submit" class="riv-cta-button">OBTENIR MON CODE -20 % →</button>
-                    </div>
-                </form>
-                <div class="riv-reassurance-micro">
-                    <span>✓ Gratuit</span> • <span>✓ Sans engagement</span> • <span>✓ Accès prioritaire 72h</span>
-                </div>
+            <!-- BLOC VIDÉO MP4 -->
+            <div class="riv-video-container">
+                <video autoplay muted loop playsinline>
+                    <source src="rivelo-demo.mp4" type="video/mp4">
+                    Votre navigateur ne supporte pas la lecture de vidéos.
+                </video>
             </div>
         </header>
 
